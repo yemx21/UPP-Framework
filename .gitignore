@@ -1,32 +1,18 @@
-# Prerequisites
-*.d
+##ignore this file##
+/.vs/
+/Compiler/LLVM/
+/U++FFMPEG/
+/ffmpeg_upp/
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+.exp
+.iobj
+.obj
+.ipdb
+.ipch
+.lib
+.pdb
+.db
+.VC.db
+.tlog
+.tmp
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
