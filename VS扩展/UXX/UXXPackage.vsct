@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!--  This is the file that defines the actual layout and type of the commands.
+        It is divided in different sections (e.g. command definition, command
+        placement, ...), with each defining a specific set of properties.
+        See the comment before each section for more details about how to
+        use it. -->
+
+  <!--  The VSCT compiler (the tool that translates this file into the binary
+        format that VisualStudio will consume) has the ability to run a preprocessor
+        on the vsct file; this preprocessor is (usually) the C++ preprocessor, so
+        it is possible to define includes and macros with the same syntax used
+        in C++ files. Using this ability of the compiler here, we include some files
+        defining some of the constants that we will use inside the file. -->
+
+  <!--This is the file that defines the IDs for all the commands exposed by VisualStudio. -->
+  <Extern href="stdidcmd.h"/>
+
+  <!--This header contains the command ids for the menus provided by the shell. -->
+  <Extern href="vsshlids.h"/>
+
+  <!--The Commands section is where commands, menus, and menu groups are defined.
+      This section uses a Guid to identify the package that provides the command defined inside it. -->
+  <Commands package="guidUPackagePkg">
+    <!-- Inside this section we have different sub-sections: one for the menus, another
+    for the menu groups, one for the buttons (the actual commands), one for the combos
+    and the last one for the bitmaps used. Each element is identified by a command id that
+    is a unique pair of guid and numeric identifier; the guid part of the identifier is usually
+    called "command set" and is used to group different command inside a logically related
+    group; your package should define its own command set in order to avoid collisions
+    with command ids defined by other packages. -->
+
+    <!-- In this section you can define new menu groups. A menu group is a container for
+         other menus or buttons (commands); from a visual point of view you can see the
+         group as the part of a menu contained between two lines. The parent of a group
+         must be a menu. -->
+    <Groups>
+      <Group guid="guidUPackageCmdSet" id="UMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+      </Group>
+
+      <Group guid="guidUPackageCmdSet" id="UMainToolbarGroup" priority="0x100">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_TOOL_STANDARD"/>
+      </Group>
+
+      <Group guid="guidUPackageCmdSet" id="UDiagnosisToolbarGroup" priority="0x100">
+        <Parent guid="guidUPackageCmdSet" id="UDiagnosisToolbar"/>
+      </Group>
+
+      <Group guid="guidUPackageCmdSet" id="UOutputToolbarGroup" priority="0x100">
+        <Parent guid="guidUPackageCmdSet" id="UOutputToolbar"/>
+      </Group>
+
+      <Group guid="guidUPackageCmdSet" id="UToolbarGroup" priority="0x100">
+        <Parent guid="guidUPackageCmdSet" id="UToolbar"/>
+      </Group>
+
+      <Group guid="guidUPackageCmdSet" id="UCompileMenuControllerGroup" priority="0x100">
+        <Parent guid="guidUPackageCmdSet" id="UCompileMenuController" />
+      </Group>
+    </Groups>
+
+    <!--Buttons section. -->
+    <!--This section defines the elements the user can interact with, like a menu command or a button 
+        or combo box in a toolbar. -->
+    <Buttons>
+      <!--To define a menu group you have to specify its ID, the parent menu and its display priority. 
+          The command is visible and enabled by default. If you need to change the visibility, status, etc, you can use
+          the CommandFlag node.
+          You can add more than one CommandFlag node e.g.:
+              <CommandFlag>DefaultInvisible</CommandFlag>
+              <CommandFlag>DynamicVisibility</CommandFlag>
+          If you do not want an image next to your command, remove the Icon node /> -->
+
+      <Button guid="guidUPackageCmdSet" id="cmdidOutput" priority="0x0100" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_VIEW_DEV_WINDOWS"/>
+        <Icon guid="guidImages" id="bmp_output" />
+        <Strings>
+          <ButtonText>U++输出</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidUPackageCmdSet" id="cmdidCompileError" priority="0x0100" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_VIEW_DEV_WINDOWS"/>
+        <Icon guid="guidImages" id="bmp_compileerror" />
+        <Strings>
+          <ButtonText>U++编译错误列表</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidUPackageCmdSet" id="cmdidConfig" priority="0x100" type="Button">
+        <Parent guid="guidUPackageCmdSet" id="UToolbarGroup"/>
+        <Icon guid="guidImages" id="bmp_config"/>
+        <Strings>
+          <ButtonText>编译器开关</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidUPackageCmdSet" id="cmdidDiagnosisClear" priority="0x100" type="Button">
+        <Parent guid="guidUPackageCmdSet" id="UDiagnosisToolbarGroup"/>
+        <Icon guid="guidImages" id="bmp_clear"/>
+        <Strings>
+          <ButtonText>清除信息</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidUPackageCmdSet" id="cmdidDiagnosisAutoWrap" priority="0x100" type="Button">
+        <Parent guid="guidUPackageCmdSet" id="UDiagnosisToolbarGroup"/>
+        <Icon guid="guidImages" id="bmp_autowrap"/>
+        <Strings>
+          <ButtonText>自动换行</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidUPackageCmdSet" id="cmdidOutputClear" priority="0x100" type="Button">
+        <Parent guid="guidUPackageCmdSet" id="UOutputToolbarGroup"/>
+        <Icon guid="guidImages" id="bmp_clear"/>
+        <Strings>
+          <ButtonText>清除信息</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidUPackageCmdSet" id="cmdidOutputAutoWrap" priority="0x100" type="Button">
+        <Parent guid="guidUPackageCmdSet" id="UOutputToolbarGroup"/>
+        <Icon guid="guidImages" id="bmp_autowrap"/>
+        <Strings>
+          <ButtonText>自动换行</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidUPackageCmdSet" id="cmdidCompile" priority="0x100" type="Button">
+        <Parent guid="guidUPackageCmdSet" id="UCompileMenuControllerGroup"/>
+        <Icon guid="guidImages" id="bmp_compile"/>
+        <Strings>
+          <ButtonText>编译</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidUPackageCmdSet" id="cmdidCompileAll" priority="0x100" type="Button">
+        <Parent guid="guidUPackageCmdSet" id="UCompileMenuControllerGroup"/>
+        <Icon guid="guidImages" id="bmp_compileall"/>
+        <Strings>
+          <ButtonText>编译所有工程</ButtonText>
+        </Strings>
+      </Button>
+
+    </Buttons>
+
+    <!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
+    <Bitmaps>
+      <!--  The bitmap id is defined in a way that is a little bit different from the others: 
+            the declaration starts with a guid for the bitmap strip, then there is the resource id of the 
+            bitmap strip containing the bitmaps and then there are the numeric ids of the elements used 
+            inside a button definition. An important aspect of this declaration is that the element id 
+            must be the actual index (1-based) of the bitmap inside the bitmap strip. -->
+      <Bitmap guid="guidImages" href="Resources\images.png" usedList="bmp_package, bmp_check, bmp_checkall, bmp_compile, bmp_compileall,bmp_config, bmp_diagnosis, bmp_clear, bmp_autowrap,bmp_compileerror,bmp_output"/>
+
+    </Bitmaps>
+
+    <Menus>
+      <Menu guid="guidUPackageCmdSet" id="UToolbar" priority="0x0001" type="Toolbar">
+        <CommandFlag>DefaultDocked</CommandFlag>
+        <Strings>
+          <ButtonText>U++框架工具栏</ButtonText>
+        </Strings>
+      </Menu>
+
+      <Menu guid="guidUPackageCmdSet" id="UCompileMenuController" priority="0x0100" type="MenuController">
+        <Parent guid="guidUPackageCmdSet" id="UToolbarGroup" />
+        <CommandFlag>IconAndText</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <CommandFlag>TextIsAnchorCommand</CommandFlag>
+        <Strings>
+          <ButtonText>U++编译</ButtonText>
+        </Strings>
+      </Menu>
+
+      <Menu guid="guidUPackageCmdSet" id="UDiagnosisToolbar" priority="0x0000" type="ToolWindowToolbar">
+        <Parent guid="guidUPackageCmdSet" id="UDiagnosisToolbar" />
+        <Strings>
+          <ButtonText>诊断窗口工具栏</ButtonText>
+        </Strings>
+      </Menu>
+
+      <Menu guid="guidUPackageCmdSet" id="UOutputToolbar" priority="0x0000" type="ToolWindowToolbar">
+        <Parent guid="guidUPackageCmdSet" id="UOutputToolbar" />
+        <Strings>
+          <ButtonText>输出窗口工具栏</ButtonText>
+        </Strings>
+      </Menu>
+
+    </Menus>
+
+  </Commands>
+
+  <CommandPlacements>
+
+    <CommandPlacement guid="guidUPackageCmdSet" id="UToolbarGroup" priority="0x600">
+      <Parent guid="guidSHLMainMenu" id="IDM_VS_TOOL_STANDARD"/>
+    </CommandPlacement>
+
+  </CommandPlacements>
+
+  <Symbols>
+    <GuidSymbol name="guidUPackagePkg" value="{bebe7c15-bcaa-42e7-9265-f2d956bb346a}" />
+
+    <GuidSymbol name="guidUPackageCmdSet" value="{9d1870c7-944c-40be-84fd-348bdc4c098b}">
+
+      <IDSymbol name="UMenuGroup" value="0x1010" />
+      <IDSymbol name="cmdidDiagnosis" value="0x3001" />
+      <IDSymbol name="cmdidOutput" value="0x5001" />
+
+      <IDSymbol name="UToolbar" value="0x101" />
+      <IDSymbol name="UToolbarGroup" value="0x1012" />
+      <IDSymbol name="UMainToolbarGroup" value="0x1013" />
+      <IDSymbol name="UCompileMenuController" value="0x1016" />
+      <IDSymbol name="UCompileMenuControllerGroup" value="0x1017" />
+
+
+      <IDSymbol name="cmdidConfig" value="0x2002" />
+      <IDSymbol name="cmdidCompile" value="0x2005" />
+      <IDSymbol name="cmdidCompileAll" value="0x2006" />
+
+
+      <IDSymbol name="UDiagnosisToolbar" value="0x3002" />
+      <IDSymbol name="UDiagnosisToolbarGroup" value="0x3003" />
+      <IDSymbol name="cmdidDiagnosisClear" value="0x3004" />
+      <IDSymbol name="cmdidDiagnosisAutoWrap" value="0x3005" />
+
+      <IDSymbol name="cmdidCompileError" value="0x4001" />
+
+      <IDSymbol name="UOutputToolbar" value="0x5002" />
+      <IDSymbol name="UOutputToolbarGroup" value="0x5003" />
+      <IDSymbol name="cmdidOutputClear" value="0x5004" />
+      <IDSymbol name="cmdidOutputAutoWrap" value="0x5005" />
+
+    </GuidSymbol>
+
+
+    <GuidSymbol name="guidImages" value="{060726f4-6c0b-4d66-84c8-847e99892187}" >
+      <IDSymbol name="bmp_package" value="1" />
+      <IDSymbol name="bmp_check" value="2" />
+      <IDSymbol name="bmp_checkall" value="3" />
+      <IDSymbol name="bmp_compile" value="4" />
+      <IDSymbol name="bmp_compileall" value="5" />
+      <IDSymbol name="bmp_config" value="6" />
+      <IDSymbol name="bmp_diagnosis" value="7" />
+      <IDSymbol name="bmp_clear" value="8" />
+      <IDSymbol name="bmp_autowrap" value="9" />
+      <IDSymbol name="bmp_compileerror" value="10"/>
+      <IDSymbol name="bmp_output" value="11"/>
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>

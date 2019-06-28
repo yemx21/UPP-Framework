@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="U++文件">
+      <UniqueIdentifier>{59f9a2a9-b98c-4847-ab6e-86cc296b62dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Graphic">
+      <UniqueIdentifier>{d7f2deef-5988-412d-bc12-68cf7fab703e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Graphic\Brush">
+      <UniqueIdentifier>{f1b7cb7e-6806-462a-b8c4-102322b21d75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Graphic\Effect">
+      <UniqueIdentifier>{b874ca66-de1d-4767-b27c-d74cb668a109}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Graphic\Feature">
+      <UniqueIdentifier>{3b1b5473-f628-4a24-bed8-8af32e073999}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Graphic\Geometry">
+      <UniqueIdentifier>{dcf766d8-fc30-4c33-8f64-ebf6024103bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Graphic\Media">
+      <UniqueIdentifier>{55924d3e-3fe8-4e22-89d2-13285aca4b0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Graphic\Text">
+      <UniqueIdentifier>{e6c8bfac-02ce-4f74-ac3d-1024f867ff95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Graphic\Feature\D2D1WithD3D11">
+      <UniqueIdentifier>{3460c431-b535-494e-9040-bded923abf31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Graphic">
+      <UniqueIdentifier>{e5fe1834-8195-47b5-9379-4b2c1e7926cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Graphic\Brush">
+      <UniqueIdentifier>{96163fc5-f7c0-49ba-92a2-a6fe12567544}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Graphic\Effect">
+      <UniqueIdentifier>{927b9d18-d8c4-4953-9c5d-2880217acb96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Graphic\Feature">
+      <UniqueIdentifier>{916655fc-6d74-403b-9150-ecd9b3bfcc46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Graphic\Feature\D2D1WithD3D11">
+      <UniqueIdentifier>{f652009e-550e-4e0e-b928-eafcf5ad017b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Graphic\Geometry">
+      <UniqueIdentifier>{9787b948-cfa4-4e88-accf-e5a913933fe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Graphic\Media">
+      <UniqueIdentifier>{87920eb7-9ee2-4cc3-a0c8-2dbef5fd8a54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Graphic\Text">
+      <UniqueIdentifier>{5591009e-3886-4399-863b-1f8940cbf992}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Graphic\Rendering">
+      <UniqueIdentifier>{ee970e9f-0b60-4cb5-8d8d-713b3ecb11f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Media">
+      <UniqueIdentifier>{e9c91d92-8310-4dd8-87fc-13ed472b5af5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Media">
+      <UniqueIdentifier>{dcca7f7c-62ab-4ce7-8f1f-6cc12fc617a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Threading">
+      <UniqueIdentifier>{3e609325-12b6-45f1-9e6e-e0ac1cc472fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Windows">
+      <UniqueIdentifier>{8f3e7504-43bf-4af6-8b67-9048630111a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Windows\Input">
+      <UniqueIdentifier>{4a5e0be1-7edc-4a30-9bd8-f47f41335627}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Windows">
+      <UniqueIdentifier>{433142ba-dce4-4f5f-8e69-ea3263e48d0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Windows\Input">
+      <UniqueIdentifier>{9129deca-5f20-413c-b0db-7d1d09f2adf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Graphic\Rendering">
+      <UniqueIdentifier>{53b5548c-7794-43c9-9366-9728920e7d05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Graphic\Rendering\Internal">
+      <UniqueIdentifier>{226d1c7f-ae50-47a5-b83f-d0dd78bf6a9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Windows\Media">
+      <UniqueIdentifier>{53c6b8be-6d35-4130-965d-8b1e5a8d2245}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Threading">
+      <UniqueIdentifier>{5972daf6-54f1-47b7-b374-b4948960fddd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Threading\Internal">
+      <UniqueIdentifier>{c24c9d90-2ff3-4871-9d7c-f1fdfa62a000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Threading\Internal">
+      <UniqueIdentifier>{6a755c08-717b-4bbe-8488-37e800bcba97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Windows\Controls">
+      <UniqueIdentifier>{b3f894f2-4c66-4363-b48c-f745107158af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Windows\Input\Internal">
+      <UniqueIdentifier>{a7e8c9b1-72d1-40e9-998a-8a93e03e7023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Windows\Input\Internal">
+      <UniqueIdentifier>{41c965ea-c208-418e-9c76-ae17c92b3b83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Internal">
+      <UniqueIdentifier>{72575eca-8b81-4bb0-b178-134ec3fdf14e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Internal">
+      <UniqueIdentifier>{7a14048c-c916-47fa-a956-f53bcda92126}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DependantObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DependantValueEntry.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DependencyProperty.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DependencyObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Brush\BitmapBrush.cpp">
+      <Filter>源文件\Graphic\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Brush\Brush.cpp">
+      <Filter>源文件\Graphic\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Brush\GradientStopCollection.cpp">
+      <Filter>源文件\Graphic\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Brush\LinearGradientBrush.cpp">
+      <Filter>源文件\Graphic\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Brush\Pen.cpp">
+      <Filter>源文件\Graphic\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Brush\RadialGradientBrush.cpp">
+      <Filter>源文件\Graphic\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Brush\SolidColorBrush.cpp">
+      <Filter>源文件\Graphic\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Brush\StrokeStyle.cpp">
+      <Filter>源文件\Graphic\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Effect\BlurEffect.cpp">
+      <Filter>源文件\Graphic\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Effect\DropShadowEffect.cpp">
+      <Filter>源文件\Graphic\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Effect\Effect.cpp">
+      <Filter>源文件\Graphic\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Effect\SaturationEffect.cpp">
+      <Filter>源文件\Graphic\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Feature\D2D1WithD3D11\Feature8.cpp">
+      <Filter>源文件\Graphic\Feature\D2D1WithD3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Geometry\CombinedGeometry.cpp">
+      <Filter>源文件\Graphic\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Geometry\EllipseGeometry.cpp">
+      <Filter>源文件\Graphic\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Geometry\Geometry.cpp">
+      <Filter>源文件\Graphic\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Geometry\GeometryGroup.cpp">
+      <Filter>源文件\Graphic\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Geometry\PathGeometry.cpp">
+      <Filter>源文件\Graphic\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Geometry\RectangleGeometry.cpp">
+      <Filter>源文件\Graphic\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Geometry\RoundedRectangleGeometry.cpp">
+      <Filter>源文件\Graphic\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Media\Bitmap.cpp">
+      <Filter>源文件\Graphic\Media</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Media\BitmapSource.cpp">
+      <Filter>源文件\Graphic\Media</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Media\WriteableBitmap.cpp">
+      <Filter>源文件\Graphic\Media</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Text\TextFormat.cpp">
+      <Filter>源文件\Graphic\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Text\TextLayout.cpp">
+      <Filter>源文件\Graphic\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Rendering\RenderContext.cpp">
+      <Filter>源文件\Graphic\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositeTransform.cpp">
+      <Filter>源文件\Media</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixTransform.cpp">
+      <Filter>源文件\Media</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>源文件\Media</Filter>
+    </ClCompile>
+    <ClCompile Include="GradientStop.cpp">
+      <Filter>源文件\Media</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Resource.cpp">
+      <Filter>源文件\Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\GraphicFactory.cpp">
+      <Filter>源文件\Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="UIObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Media\Surface.cpp">
+      <Filter>源文件\Graphic\Media</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Media\Texture2D.cpp">
+      <Filter>源文件\Graphic\Media</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Geometry\ArcSegment.cpp">
+      <Filter>源文件\Graphic\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Geometry\BezierSegment.cpp">
+      <Filter>源文件\Graphic\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Geometry\LineSegment.cpp">
+      <Filter>源文件\Graphic\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Geometry\PathFigure.cpp">
+      <Filter>源文件\Graphic\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Geometry\PathSegment.cpp">
+      <Filter>源文件\Graphic\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Geometry\QuadraticBezierSegment.cpp">
+      <Filter>源文件\Graphic\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Geometry\StreamGeometry.cpp">
+      <Filter>源文件\Graphic\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Input\InputDevice.cpp">
+      <Filter>源文件\Windows\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Input\Mouse.cpp">
+      <Filter>源文件\Windows\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="EventManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\HwndHost.cpp">
+      <Filter>源文件\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Window.cpp">
+      <Filter>源文件\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="RoutedEvent.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\IInputElement.cpp">
+      <Filter>源文件\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Visual.cpp">
+      <Filter>源文件\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\VisualRoot.cpp">
+      <Filter>源文件\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\VisualTreeHelper.cpp">
+      <Filter>源文件\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\UIElement.cpp">
+      <Filter>源文件\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Input\Keyboard.cpp">
+      <Filter>源文件\Windows\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Input\KeyInterop.cpp">
+      <Filter>源文件\Windows\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Input\Internal\KeyboardDevice_impl.cpp">
+      <Filter>源文件\Windows\Input\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="Internal\RoutedEventHandlerInfo.cpp">
+      <Filter>源文件\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="Internal\EventHandlersStore.cpp">
+      <Filter>源文件\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="Internal\MulticastRoutedEventDelegate.cpp">
+      <Filter>源文件\Internal</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="U++\UPlusPlus.h">
+      <Filter>U++文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Events.h">
+      <Filter>头文件\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Graphic.h">
+      <Filter>头文件\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\GraphicFactory.h">
+      <Filter>头文件\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Resource.h">
+      <Filter>头文件\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Brush\BitmapBrush.h">
+      <Filter>头文件\Graphic\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Brush\Brush.h">
+      <Filter>头文件\Graphic\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Brush\GradientStopCollection.h">
+      <Filter>头文件\Graphic\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Brush\LinearGradientBrush.h">
+      <Filter>头文件\Graphic\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Brush\Pen.h">
+      <Filter>头文件\Graphic\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Brush\RadialGradientBrush.h">
+      <Filter>头文件\Graphic\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Brush\SolidColorBrush.h">
+      <Filter>头文件\Graphic\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Brush\StrokeStyle.h">
+      <Filter>头文件\Graphic\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Effect\BlurEffect.h">
+      <Filter>头文件\Graphic\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Effect\DropShadowEffect.h">
+      <Filter>头文件\Graphic\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Effect\Effect.h">
+      <Filter>头文件\Graphic\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Effect\SaturationEffect.h">
+      <Filter>头文件\Graphic\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Feature\Feature.h">
+      <Filter>头文件\Graphic\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Feature\D2D1WithD3D11\Feature8.h">
+      <Filter>头文件\Graphic\Feature\D2D1WithD3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Geometry\CombinedGeometry.h">
+      <Filter>头文件\Graphic\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Geometry\EllipseGeometry.h">
+      <Filter>头文件\Graphic\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Geometry\Geometry.h">
+      <Filter>头文件\Graphic\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Geometry\GeometryGroup.h">
+      <Filter>头文件\Graphic\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Geometry\PathGeometry.h">
+      <Filter>头文件\Graphic\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Geometry\RectangleGeometry.h">
+      <Filter>头文件\Graphic\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Geometry\RoundedRectangleGeometry.h">
+      <Filter>头文件\Graphic\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Media\Bitmap.h">
+      <Filter>头文件\Graphic\Media</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Media\BitmapSource.h">
+      <Filter>头文件\Graphic\Media</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Media\WriteableBitmap.h">
+      <Filter>头文件\Graphic\Media</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Text\TextFormat.h">
+      <Filter>头文件\Graphic\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Text\TextLayout.h">
+      <Filter>头文件\Graphic\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Delegate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DependantObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DependantValueEntry.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DependencyObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DependencyProperty.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PreCoerceCallbackHelper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UIObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>头文件\Media</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixTransform.h">
+      <Filter>头文件\Media</Filter>
+    </ClInclude>
+    <ClInclude Include="GradientStop.h">
+      <Filter>头文件\Media</Filter>
+    </ClInclude>
+    <ClInclude Include="CompositeTransform.h">
+      <Filter>头文件\Media</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Media\Surface.h">
+      <Filter>头文件\Graphic\Media</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Media\Texture2D.h">
+      <Filter>头文件\Graphic\Media</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Geometry\ArcSegment.h">
+      <Filter>头文件\Graphic\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Geometry\BezierSegment.h">
+      <Filter>头文件\Graphic\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Geometry\LineSegment.h">
+      <Filter>头文件\Graphic\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Geometry\PathFigure.h">
+      <Filter>头文件\Graphic\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Geometry\PathSegment.h">
+      <Filter>头文件\Graphic\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Geometry\QuadraticBezierSegment.h">
+      <Filter>头文件\Graphic\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Geometry\StreamGeometry.h">
+      <Filter>头文件\Graphic\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Graphics.h">
+      <Filter>头文件\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Input\InputDevice.h">
+      <Filter>头文件\Windows\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Input\InputManager.h">
+      <Filter>头文件\Windows\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Input\Inputs.h">
+      <Filter>头文件\Windows\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Input\Mouse.h">
+      <Filter>头文件\Windows\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Application_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EventManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\HwndHost.h">
+      <Filter>头文件\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Window.h">
+      <Filter>头文件\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Window_impl.h">
+      <Filter>头文件\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Rendering\ClipCommand.h">
+      <Filter>头文件\Graphic\Rendering\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="UICore_Config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UICore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RoutedEvent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Input\Keyboard.h">
+      <Filter>头文件\Windows\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Controls\IContentControl.h">
+      <Filter>头文件\Windows\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\IInputElement.h">
+      <Filter>头文件\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\UIElement.h">
+      <Filter>头文件\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Visual.h">
+      <Filter>头文件\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\VisualRoot.h">
+      <Filter>头文件\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\VisualTreeHelper.h">
+      <Filter>头文件\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Rendering\GeometryClipCommand.h">
+      <Filter>头文件\Graphic\Rendering\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Rendering\OpacityCommand.h">
+      <Filter>头文件\Graphic\Rendering\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\Rendering\OpacityMaskCommand.h">
+      <Filter>头文件\Graphic\Rendering\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Input\Internal\KeyboardDevice_impl.h">
+      <Filter>头文件\Windows\Input\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Internal\RoutedEventHandlerInfo.h">
+      <Filter>头文件\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Internal\EventHandlersStore.h">
+      <Filter>头文件\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Internal\EventManager_impl.h">
+      <Filter>头文件\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Internal\MulticastRoutedEventDelegate.h">
+      <Filter>头文件\Internal</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

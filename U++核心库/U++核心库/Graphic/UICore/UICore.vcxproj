@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{58581E2A-8CB3-4B64-8412-01C33CC051CC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>UIFramework</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(UPPSDK_DIR)1000\Include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(UPPSDK_DIR)1000\Lib\x86\</LibraryPath>
+    <UPPReflection>true</UPPReflection>
+    <UPPGenerateDoc>false</UPPGenerateDoc>
+    <UPPPreCompileHeader>UICore_Config.h</UPPPreCompileHeader>
+    <OutDir>..\..\..\Debug\</OutDir>
+    <UPPAssemblyDefination>asm=UICore,ver=1.0,pbk=09E6EEC2-3DFC-4CDB-B1CC-953D12CFFBEB</UPPAssemblyDefination>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(UPPSDK_DIR)1000\Include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(UPPSDK_DIR)1000\Lib\x86\</LibraryPath>
+    <UPPReflection>true</UPPReflection>
+    <UPPGenerateDoc>true</UPPGenerateDoc>
+    <UPPPreCompileHeader>dllconfig.h</UPPPreCompileHeader>
+    <OutDir>..\..\..\Release\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(UPPSDK_DIR)1000\Include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(UPPSDK_DIR)1000\Lib\x64\</LibraryPath>
+    <UPPReflection>true</UPPReflection>
+    <UPPGenerateDoc>false</UPPGenerateDoc>
+    <UPPPreCompileHeader>UICore_Config.h</UPPPreCompileHeader>
+    <OutDir>..\..\..\Debug_x64\</OutDir>
+    <TargetName>UICored</TargetName>
+    <IntDir>$(Configuration)\</IntDir>
+    <UPPAssemblyDefination>asm=UICore,ver=1.0,pbk=09E6EEC2-3DFC-4CDB-B1CC-953D12CFFBEB</UPPAssemblyDefination>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(UPPSDK_DIR)1000\Include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(UPPSDK_DIR)1000\Lib\x64\</LibraryPath>
+    <UPPReflection>true</UPPReflection>
+    <UPPGenerateDoc>false</UPPGenerateDoc>
+    <UPPPreCompileHeader>UICore_Config.h</UPPPreCompileHeader>
+    <UPPAssemblyDefination>asm=UICore,ver=1.0,pbk=09E6EEC2-3DFC-4CDB-B1CC-953D12CFFBEB</UPPAssemblyDefination>
+    <OutDir>..\..\..\Release_x64\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UGenDir>U++</UGenDir>
+    <UPPGenerateAssemblyEntry>true</UPPGenerateAssemblyEntry>
+    <UAssemblyEntry>uentry</UAssemblyEntry>
+    <UPPCustomAssemblyEntryFunction>false</UPPCustomAssemblyEntryFunction>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;UICORE_EXPORTS;_DEBUG;_WINDOWS;_USRDLL;REFLECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ucorlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;UIFRAMEWORK_EXPORTS;NDEBUG;_WINDOWS;_USRDLL;REFLECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ucorlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN64;UICORE_EXPORTS;_DEBUG;_WINDOWS;_USRDLL;REFLECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ucorlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN64;UICORE_EXPORTS;NDEBUG;_WINDOWS;_USRDLL;REFLECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ucorlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="CompositeTransform.cpp" />
+    <ClCompile Include="DependantObject.cpp" />
+    <ClCompile Include="DependantValueEntry.cpp" />
+    <ClCompile Include="Internal\EventHandlersStore.cpp" />
+    <ClCompile Include="Internal\MulticastRoutedEventDelegate.cpp" />
+    <ClCompile Include="Internal\RoutedEventHandlerInfo.cpp" />
+    <ClCompile Include="RoutedEvent.cpp" />
+    <ClCompile Include="DependencyObject.cpp" />
+    <ClCompile Include="DependencyProperty.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="EventManager.cpp" />
+    <ClCompile Include="GradientStop.cpp" />
+    <ClCompile Include="Graphic\Brush\BitmapBrush.cpp" />
+    <ClCompile Include="Graphic\Brush\Brush.cpp" />
+    <ClCompile Include="Graphic\Brush\GradientStopCollection.cpp" />
+    <ClCompile Include="Graphic\Brush\LinearGradientBrush.cpp" />
+    <ClCompile Include="Graphic\Brush\Pen.cpp" />
+    <ClCompile Include="Graphic\Brush\RadialGradientBrush.cpp" />
+    <ClCompile Include="Graphic\Brush\SolidColorBrush.cpp" />
+    <ClCompile Include="Graphic\Brush\StrokeStyle.cpp" />
+    <ClCompile Include="Graphic\Effect\BlurEffect.cpp" />
+    <ClCompile Include="Graphic\Effect\DropShadowEffect.cpp" />
+    <ClCompile Include="Graphic\Effect\Effect.cpp" />
+    <ClCompile Include="Graphic\Effect\SaturationEffect.cpp" />
+    <ClCompile Include="Graphic\Geometry\ArcSegment.cpp" />
+    <ClCompile Include="Graphic\Geometry\BezierSegment.cpp" />
+    <ClCompile Include="Graphic\Geometry\LineSegment.cpp" />
+    <ClCompile Include="Graphic\Geometry\PathFigure.cpp" />
+    <ClCompile Include="Graphic\Geometry\PathSegment.cpp" />
+    <ClCompile Include="Graphic\Geometry\QuadraticBezierSegment.cpp" />
+    <ClCompile Include="Graphic\Geometry\StreamGeometry.cpp" />
+    <ClCompile Include="Graphic\GraphicFactory.cpp" />
+    <ClCompile Include="Graphic\Feature\D2D1WithD3D11\Feature8.cpp" />
+    <ClCompile Include="Graphic\Geometry\CombinedGeometry.cpp" />
+    <ClCompile Include="Graphic\Geometry\EllipseGeometry.cpp" />
+    <ClCompile Include="Graphic\Geometry\Geometry.cpp" />
+    <ClCompile Include="Graphic\Geometry\GeometryGroup.cpp" />
+    <ClCompile Include="Graphic\Geometry\PathGeometry.cpp" />
+    <ClCompile Include="Graphic\Geometry\RectangleGeometry.cpp" />
+    <ClCompile Include="Graphic\Geometry\RoundedRectangleGeometry.cpp" />
+    <ClCompile Include="Graphic\Media\Bitmap.cpp" />
+    <ClCompile Include="Graphic\Media\BitmapSource.cpp" />
+    <ClCompile Include="Graphic\Media\Surface.cpp" />
+    <ClCompile Include="Graphic\Media\Texture2D.cpp" />
+    <ClCompile Include="Graphic\Media\WriteableBitmap.cpp" />
+    <ClCompile Include="Graphic\Rendering\RenderContext.cpp" />
+    <ClCompile Include="Graphic\Resource.cpp" />
+    <ClCompile Include="Graphic\Text\TextFormat.cpp" />
+    <ClCompile Include="Graphic\Text\TextLayout.cpp" />
+    <ClCompile Include="MatrixTransform.cpp" />
+    <ClCompile Include="Transform.cpp" />
+    <ClCompile Include="UIObject.cpp" />
+    <ClCompile Include="Windows\HwndHost.cpp" />
+    <ClCompile Include="Windows\IInputElement.cpp" />
+    <ClCompile Include="Windows\Input\InputDevice.cpp" />
+    <ClCompile Include="Windows\Input\Internal\KeyboardDevice_impl.cpp" />
+    <ClCompile Include="Windows\Input\Keyboard.cpp" />
+    <ClCompile Include="Windows\Input\KeyInterop.cpp" />
+    <ClCompile Include="Windows\Input\Mouse.cpp" />
+    <ClCompile Include="Windows\UIElement.cpp" />
+    <ClCompile Include="Windows\Visual.cpp" />
+    <ClCompile Include="Windows\VisualRoot.cpp" />
+    <ClCompile Include="Windows\VisualTreeHelper.cpp" />
+    <ClCompile Include="Windows\Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="Application_impl.h" />
+    <ClInclude Include="CompositeTransform.h" />
+    <ClInclude Include="Delegate.h" />
+    <ClInclude Include="DependantObject.h" />
+    <ClInclude Include="DependantValueEntry.h" />
+    <ClInclude Include="Graphic\Rendering\GeometryClipCommand.h" />
+    <ClInclude Include="Graphic\Rendering\OpacityCommand.h" />
+    <ClInclude Include="Graphic\Rendering\OpacityMaskCommand.h" />
+    <ClInclude Include="Internal\EventHandlersStore.h" />
+    <ClInclude Include="Internal\EventManager_impl.h" />
+    <ClInclude Include="Internal\MulticastRoutedEventDelegate.h" />
+    <ClInclude Include="Internal\RoutedEventHandlerInfo.h" />
+    <ClInclude Include="RoutedEvent.h" />
+    <ClInclude Include="DependencyObject.h" />
+    <ClInclude Include="DependencyProperty.h" />
+    <ClInclude Include="UICore.h" />
+    <ClInclude Include="UICore_Config.h" />
+    <ClInclude Include="EventManager.h" />
+    <ClInclude Include="GradientStop.h" />
+    <ClInclude Include="Graphic\Brush\BitmapBrush.h" />
+    <ClInclude Include="Graphic\Brush\Brush.h" />
+    <ClInclude Include="Graphic\Brush\GradientStopCollection.h" />
+    <ClInclude Include="Graphic\Brush\LinearGradientBrush.h" />
+    <ClInclude Include="Graphic\Brush\Pen.h" />
+    <ClInclude Include="Graphic\Brush\RadialGradientBrush.h" />
+    <ClInclude Include="Graphic\Brush\SolidColorBrush.h" />
+    <ClInclude Include="Graphic\Brush\StrokeStyle.h" />
+    <ClInclude Include="Graphic\Effect\BlurEffect.h" />
+    <ClInclude Include="Graphic\Effect\DropShadowEffect.h" />
+    <ClInclude Include="Graphic\Effect\Effect.h" />
+    <ClInclude Include="Graphic\Effect\SaturationEffect.h" />
+    <ClInclude Include="Graphic\Events.h" />
+    <ClInclude Include="Graphic\Feature\D2D1WithD3D11\Feature8.h" />
+    <ClInclude Include="Graphic\Feature\Feature.h" />
+    <ClInclude Include="Graphic\Geometry\ArcSegment.h" />
+    <ClInclude Include="Graphic\Geometry\BezierSegment.h" />
+    <ClInclude Include="Graphic\Geometry\CombinedGeometry.h" />
+    <ClInclude Include="Graphic\Geometry\EllipseGeometry.h" />
+    <ClInclude Include="Graphic\Geometry\Geometry.h" />
+    <ClInclude Include="Graphic\Geometry\GeometryGroup.h" />
+    <ClInclude Include="Graphic\Geometry\LineSegment.h" />
+    <ClInclude Include="Graphic\Geometry\PathFigure.h" />
+    <ClInclude Include="Graphic\Geometry\PathGeometry.h" />
+    <ClInclude Include="Graphic\Geometry\PathSegment.h" />
+    <ClInclude Include="Graphic\Geometry\QuadraticBezierSegment.h" />
+    <ClInclude Include="Graphic\Geometry\RectangleGeometry.h" />
+    <ClInclude Include="Graphic\Geometry\RoundedRectangleGeometry.h" />
+    <ClInclude Include="Graphic\Geometry\StreamGeometry.h" />
+    <ClInclude Include="Graphic\Graphic.h" />
+    <ClInclude Include="Graphic\GraphicFactory.h" />
+    <ClInclude Include="Graphic\Graphics.h" />
+    <ClInclude Include="Graphic\Media\Bitmap.h" />
+    <ClInclude Include="Graphic\Media\BitmapSource.h" />
+    <ClInclude Include="Graphic\Media\Surface.h" />
+    <ClInclude Include="Graphic\Media\Texture2D.h" />
+    <ClInclude Include="Graphic\Media\WriteableBitmap.h" />
+    <ClInclude Include="Graphic\Rendering\ClipCommand.h" />
+    <ClInclude Include="Graphic\Resource.h" />
+    <ClInclude Include="Graphic\Text\TextFormat.h" />
+    <ClInclude Include="Graphic\Text\TextLayout.h" />
+    <ClInclude Include="MatrixTransform.h" />
+    <ClInclude Include="PreCoerceCallbackHelper.h" />
+    <ClInclude Include="Transform.h" />
+    <ClInclude Include="U++\UPlusPlus.h" />
+    <ClInclude Include="UIObject.h" />
+    <ClInclude Include="Windows\Controls\IContentControl.h" />
+    <ClInclude Include="Windows\HwndHost.h" />
+    <ClInclude Include="Windows\IInputElement.h" />
+    <ClInclude Include="Windows\Input\InputDevice.h" />
+    <ClInclude Include="Windows\Input\InputManager.h" />
+    <ClInclude Include="Windows\Input\Inputs.h" />
+    <ClInclude Include="Windows\Input\Internal\KeyboardDevice_impl.h" />
+    <ClInclude Include="Windows\Input\Keyboard.h" />
+    <ClInclude Include="Windows\Input\Mouse.h" />
+    <ClInclude Include="Windows\UIElement.h" />
+    <ClInclude Include="Windows\Visual.h" />
+    <ClInclude Include="Windows\VisualRoot.h" />
+    <ClInclude Include="Windows\VisualTreeHelper.h" />
+    <ClInclude Include="Windows\Window.h" />
+    <ClInclude Include="Windows\Window_impl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(UPPSDK_DIR)1000\VCBuild\Compiler.xml" />
+    <PropertyPageSchema Include="$(UPPSDK_DIR)1000\VCBuild\Reflection.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GraphicCore\GraphicCore.vcxproj">
+      <Project>{1295eebf-3bbe-43a8-ad9c-3c5f49ebbe74}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AA7266E8-3B1C-4EB6-942A-42EAD72A6BB0}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Audio</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\..\Debug\</OutDir>
+    <IncludePath>$(UPPSDK_DIR)1000\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(UPPSDK_DIR)1000\Lib\x86;$(LibraryPath)</LibraryPath>
+    <TargetName>Audiod</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(UPPSDK_DIR)\1000\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(UPPSDK_DIR)\1000\Lib\x64;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\..\Debug_x64\</OutDir>
+    <TargetName>Audiod</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\Release\</OutDir>
+    <IncludePath>$(UPPSDK_DIR)1000\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(UPPSDK_DIR)1000\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(UPPSDK_DIR)\1000\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(UPPSDK_DIR)\1000\Lib\x64;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\Release_x64\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;AUDIO_EXPORTS;REFELECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\SoundTouch\include;..\SoundTouch\source\SoundTouchDLL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ucorlibd.lib;AudioSharedd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>Extras\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>XCOPY $(ProjectDir)Audio.h $(UPPSDK_DIR)1000\Include\System\Audio\Internal\   /Y
+XCOPY $(ProjectDir)Config.h $(UPPSDK_DIR)1000\Include\System\Audio\Internal\   /Y</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>XCOPY $(TargetDir)$(TargetName).dll $(UPPSDK_DIR)1000\Lib\x86\   /Y
+XCOPY $(TargetDir)$(TargetName).lib $(UPPSDK_DIR)1000\Lib\x86\   /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;AUDIO_EXPORTS;REFELECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <AdditionalIncludeDirectories>..\SoundTouch\include;..\SoundTouch\source\SoundTouchDLL;..\..\WinEnv\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ucorlibd.lib;AudioSharedd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>Extras\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>XCOPY $(ProjectDir)Audio.h $(UPPSDK_DIR)\1000\Include\System\Audio\Internal\   /Y
+XCOPY $(ProjectDir)Config.h $(UPPSDK_DIR)\1000\Include\System\Audio\Internal\   /Y</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>XCOPY $(TargetDir)$(TargetName).dll $(UPPSDK_DIR)\1000\Lib\x64\   /Y
+XCOPY $(TargetDir)$(TargetName).lib $(UPPSDK_DIR)\1000\Lib\x64\   /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;AUDIO_EXPORTS;REFELECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <AdditionalIncludeDirectories>..\SoundTouch\include;..\SoundTouch\source\SoundTouchDLL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <StringPooling>true</StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ucorlib.lib;AudioShared.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>XCOPY $(ProjectDir)Audio.h $(UPPSDK_DIR)1000\Include\System\Audio\Internal\   /Y
+XCOPY $(ProjectDir)Config.h $(UPPSDK_DIR)1000\Include\System\Audio\Internal\   /Y</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>XCOPY $(TargetDir)$(TargetName).dll $(UPPSDK_DIR)1000\Lib\x86\   /Y
+XCOPY $(TargetDir)$(TargetName).lib $(UPPSDK_DIR)1000\Lib\x86\   /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN64;NDEBUG;_WINDOWS;_USRDLL;AUDIO_EXPORTS;REFELECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <AdditionalIncludeDirectories>..\SoundTouch\include;..\SoundTouch\source\SoundTouchDLL;..\..\WinEnv\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <StringPooling>true</StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ucorlib.lib;AudioShared.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>Extras\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>XCOPY $(ProjectDir)Audio.h $(ProjectDir)..\框架头文件\Audio\   /Y
+XCOPY $(ProjectDir)Config.h $(ProjectDir)..\框架头文件\Audio\   /Y</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AudioAnalyzer.cpp" />
+    <ClCompile Include="AudioChannelLayoutConverter.cpp" />
+    <ClCompile Include="AudioGainAnalyzer.cpp" />
+    <ClCompile Include="Audio.cpp" />
+    <ClCompile Include="AudioLimiter.cpp" />
+    <ClCompile Include="AudioResampler.cpp" />
+    <ClCompile Include="AudioTimeEQ.cpp" />
+    <ClCompile Include="AudioTree.cpp" />
+    <ClCompile Include="Dither.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="DSPManager.cpp" />
+    <ClCompile Include="FFT.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PluginCenter.cpp" />
+    <ClCompile Include="StandardDSP.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Audio.h" />
+    <ClInclude Include="AudioAnalyzer.h" />
+    <ClInclude Include="AudioChannelLayoutConverter.h" />
+    <ClInclude Include="AudioGainAnalyzer.h" />
+    <ClInclude Include="AudioLimiter.h" />
+    <ClInclude Include="AudioPool.h" />
+    <ClInclude Include="AudioResampler.h" />
+    <ClInclude Include="AudioTimeEQ.h" />
+    <ClInclude Include="AudioTree.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="Dither.h" />
+    <ClInclude Include="DSPManager.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="FFT.h" />
+    <ClInclude Include="ID128.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PluginCenter.h" />
+    <ClInclude Include="StandardDSP.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\WinEnv\WinEnv.vcxproj">
+      <Project>{8114ff44-de25-438e-9960-07fa41216810}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

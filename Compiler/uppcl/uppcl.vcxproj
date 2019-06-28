@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{A63A579D-E52C-48D6-AE8B-4D8D96796AF4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>uppcl</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)..\$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>F:\U++\Compiler\LLVM\tools\clang\include;F:\U++\Compiler\LLVM\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>F:\U++\Compiler\LLVM\tools\clang\include;F:\U++\Compiler\LLVM\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CONSOLE;WIN32;_WINDOWS;DEBUG;_HAS_EXCEPTIONS=0;GTEST_HAS_RTTI=0;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;UNICODE;_UNICODE;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;__STDC_LIMIT_MACROS;_GNU_SOURCE;CMAKE_INTDIR="Release";NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>F:\U++\Compiler\LLVM\build\include;F:\U++\Compiler\LLVM\tools\clang\include;F:\U++\Compiler\LLVM\build\tools\clang\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CONSOLE;WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;GTEST_HAS_RTTI=0;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;UNICODE;_UNICODE;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;__STDC_LIMIT_MACROS;_GNU_SOURCE;CMAKE_INTDIR="Release";NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>F:\U++\Compiler\LLVM\build\include;F:\U++\Compiler\LLVM\tools\clang\include;F:\U++\Compiler\LLVM\build\tools\clang\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>XCOPY  $(TargetDir)$(TargetFileName)  $(UPPSDK_DIR)\1000\Compiler  /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="args.h" />
+    <ClInclude Include="CompilerArgsParser.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="Dispatcher.h" />
+    <ClInclude Include="ASTParser.h" />
+    <ClInclude Include="Precompiler.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Stopwatcher.hpp" />
+    <ClInclude Include="tinyxml2.h" />
+    <ClInclude Include="Types.h" />
+    <ClInclude Include="CodeGeneration.h" />
+    <ClInclude Include="Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CodeGeneration.cpp" />
+    <ClCompile Include="CompilerArgsParser.cpp" />
+    <ClCompile Include="DiskWriter.cpp" />
+    <ClCompile Include="Dispatcher.cpp" />
+    <ClCompile Include="ASTParser.cpp" />
+    <ClCompile Include="Precompiler.cpp" />
+    <ClCompile Include="StdWriter.cpp" />
+    <ClCompile Include="tinyxml2.cpp" />
+    <ClCompile Include="Types.cpp" />
+    <ClCompile Include="UParser.cpp" />
+    <ClCompile Include="uppcl.cpp" />
+    <ClCompile Include="Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LLVM\build\lib\BinaryFormat\LLVMBinaryFormat.vcxproj">
+      <Project>{03c3277e-c5da-3b4a-bcd6-c7de0045070d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\lib\Bitcode\Reader\LLVMBitReader.vcxproj">
+      <Project>{c77521e3-b0e0-3519-bd5c-4ee5a17f8bc8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\lib\IR\LLVMCore.vcxproj">
+      <Project>{899d901c-59a7-3592-8975-6ccddc59a0be}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\lib\MC\LLVMMC.vcxproj">
+      <Project>{1c3b653b-c822-3281-9e88-40fe2ac91e01}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\lib\MC\MCParser\LLVMMCParser.vcxproj">
+      <Project>{f9d5b2fa-0529-36ac-90bd-62765ad10f18}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\lib\Option\LLVMOption.vcxproj">
+      <Project>{5364ad97-3f2b-3e48-928d-b66bf2a55a0a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\lib\ProfileData\LLVMProfileData.vcxproj">
+      <Project>{ad58b961-0cf9-336f-a9df-b01f96f6452c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\lib\Support\LLVMSupport.vcxproj">
+      <Project>{e1e82ccd-a3ec-3979-a9c8-bcc190d8e567}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\AST\ClangAttrClasses.vcxproj">
+      <Project>{386c61cd-8690-3805-891a-968bc59d4db2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\AST\ClangAttrDump.vcxproj">
+      <Project>{50885127-f35d-3e23-98ae-4ad1c54dda66}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\AST\ClangAttrImpl.vcxproj">
+      <Project>{55da4b01-20e8-3248-ad8e-f3328ee5a7a2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\AST\ClangAttrVisitor.vcxproj">
+      <Project>{6a915202-1fba-3923-923b-f8d80df9b527}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\AST\ClangCommentCommandInfo.vcxproj">
+      <Project>{114e2ebf-b456-3539-a16f-8a680baf4f10}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\AST\ClangCommentCommandList.vcxproj">
+      <Project>{b90a13b2-d3ae-3097-9457-18d20be18ec9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\AST\ClangCommentHTMLNamedCharacterReferences.vcxproj">
+      <Project>{48da06c6-d485-31c9-bba6-7008b1faa14a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\AST\ClangCommentHTMLTags.vcxproj">
+      <Project>{244c8258-02db-32b5-a32f-fcc4c8502341}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\AST\ClangCommentHTMLTagsProperties.vcxproj">
+      <Project>{a6c14a4b-5d32-398b-abab-8defdf85653a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\AST\ClangCommentNodes.vcxproj">
+      <Project>{d481b67f-f2c6-340c-b525-eda4350eb506}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\AST\ClangDeclNodes.vcxproj">
+      <Project>{42143844-32cc-32e2-9d52-778d152bac89}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\AST\ClangStmtNodes.vcxproj">
+      <Project>{8cb51bd6-8d9f-35d2-abfc-e9cb253637f6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Basic\ClangAttrHasAttributeImpl.vcxproj">
+      <Project>{8684c2ad-08b7-30a8-89d6-15e9e391deb0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Basic\ClangAttrList.vcxproj">
+      <Project>{702f9dc3-b833-3614-ada9-973f183f24e2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Basic\ClangAttrSubjectMatchRuleList.vcxproj">
+      <Project>{ac241e77-c246-37ef-b685-c700b1f92ed1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Basic\ClangDiagnosticAnalysis.vcxproj">
+      <Project>{df248223-645c-3995-8421-b010187b43c4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Basic\ClangDiagnosticAST.vcxproj">
+      <Project>{206a57c7-c77f-3b0f-adb3-a25a2608bb1d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Basic\ClangDiagnosticComment.vcxproj">
+      <Project>{a1a61d3a-374b-354b-9cb3-9754c6a53ee0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Basic\ClangDiagnosticCommon.vcxproj">
+      <Project>{0eddf52e-2768-3d69-b4e6-024dad2a5847}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Basic\ClangDiagnosticCrossTU.vcxproj">
+      <Project>{653fa4e5-5787-34c4-9809-d293aa8ab4b7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Basic\ClangDiagnosticDriver.vcxproj">
+      <Project>{f416bfcc-df17-3876-90e5-6d2ca5b97f8c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Basic\ClangDiagnosticFrontend.vcxproj">
+      <Project>{62bdef82-b084-333d-8b4f-add6b3ae3dd3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Basic\ClangDiagnosticGroups.vcxproj">
+      <Project>{16902813-8f48-3bed-a4b2-ee3aa214d94d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Basic\ClangDiagnosticIndexName.vcxproj">
+      <Project>{e4c851a8-7c93-3b73-8bdb-3401c1583983}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Basic\ClangDiagnosticLex.vcxproj">
+      <Project>{2a98ffc6-7a1a-3093-a434-608fa820320e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Basic\ClangDiagnosticParse.vcxproj">
+      <Project>{b78184bb-0709-3009-a061-ccad0038a04d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Basic\ClangDiagnosticRefactoring.vcxproj">
+      <Project>{85378ec8-b2db-30ca-8775-9478a59df1fa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Basic\ClangDiagnosticSema.vcxproj">
+      <Project>{7b2889d9-d234-3aec-a40c-51bac2e93d0f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Basic\ClangDiagnosticSerialization.vcxproj">
+      <Project>{9c63386c-46a4-3639-83ea-aecd6eccb8bf}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Parse\ClangAttrParserStringSwitches.vcxproj">
+      <Project>{9442b6c8-5637-35fa-99bd-e96893e4a6c3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Parse\ClangAttrSubMatchRulesParserStringSwitches.vcxproj">
+      <Project>{648af7e9-257a-3a30-af81-372abd24fecb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Sema\ClangAttrParsedAttrImpl.vcxproj">
+      <Project>{5af92ca4-5bf1-3e21-a4a8-ac86c2946968}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Sema\ClangAttrParsedAttrKinds.vcxproj">
+      <Project>{5d29b826-cca7-3d64-aad7-ad0e951a6868}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Sema\ClangAttrParsedAttrList.vcxproj">
+      <Project>{dde63319-0eb3-3604-9ed6-80113bb14537}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Sema\ClangAttrSpellingListIndex.vcxproj">
+      <Project>{068413eb-5264-3e36-99d8-61dbbd11ba4e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Sema\ClangAttrTemplateInstantiate.vcxproj">
+      <Project>{ac187015-78bf-3157-b33a-a985e5ea3b4b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Serialization\ClangAttrPCHRead.vcxproj">
+      <Project>{bd0151fa-6e74-3400-b205-25e4ecb0fcfd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\include\clang\Serialization\ClangAttrPCHWrite.vcxproj">
+      <Project>{8b8b8d64-baf6-36a2-b168-c9aca707d3f6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\lib\Analysis\clangAnalysis.vcxproj">
+      <Project>{020bf011-1626-3c82-9f00-43c13fc4380d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\lib\ASTMatchers\clangASTMatchers.vcxproj">
+      <Project>{c211d1a2-21b4-3b6a-9fa9-4d03ac54524e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\lib\AST\clangAST.vcxproj">
+      <Project>{300a5474-2bd1-3a49-a6cc-7b7a97d90cbf}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\lib\Basic\clangBasic.vcxproj">
+      <Project>{5a9f6aad-8c1a-343b-b70c-732c7d6ce9ff}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\lib\CrossTU\clangCrossTU.vcxproj">
+      <Project>{213424f9-4cfa-3951-b04e-0052b175f5aa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\lib\Driver\clangDriver.vcxproj">
+      <Project>{0a43830e-5a0b-3994-84ec-12079cab0004}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\lib\Edit\clangEdit.vcxproj">
+      <Project>{e252d482-acef-3463-b52c-17723ca49368}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\lib\Frontend\clangFrontend.vcxproj">
+      <Project>{02d07885-033b-3f0d-b8e5-c2f3b2359424}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\lib\Lex\clangLex.vcxproj">
+      <Project>{456ace08-9ce1-3e9d-8992-66732f33762b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\lib\Parse\clangParse.vcxproj">
+      <Project>{ee71cc4d-9e2e-3620-bd02-9977e1b629a3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\lib\Rewrite\clangRewrite.vcxproj">
+      <Project>{723b1d2f-9ec4-30b1-9d29-f259f5bd76c6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\lib\Sema\clangSema.vcxproj">
+      <Project>{c7f3e6bc-9c67-3382-aa6b-a440d33a7584}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\lib\Serialization\clangSerialization.vcxproj">
+      <Project>{8a539793-20c3-3d95-a262-5f651d908bfc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\lib\StaticAnalyzer\Core\clangStaticAnalyzerCore.vcxproj">
+      <Project>{e2dae804-bc0b-33b4-8d81-594fe05377e1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\lib\StaticAnalyzer\Frontend\clangStaticAnalyzerFrontend.vcxproj">
+      <Project>{715f7ba6-a5c4-3d7f-89d8-d5e919eb0688}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\lib\Tooling\clangTooling.vcxproj">
+      <Project>{11080c2e-2aed-3609-b01f-c8799491fb48}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\tools\clang\lib\Tooling\Core\clangToolingCore.vcxproj">
+      <Project>{fda989f9-7cf5-33cb-8845-9971133ed35a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LLVM\build\ZERO_CHECK.vcxproj">
+      <Project>{a4aff5a4-9d76-3930-85c4-69a6227d4a33}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="uppcl.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

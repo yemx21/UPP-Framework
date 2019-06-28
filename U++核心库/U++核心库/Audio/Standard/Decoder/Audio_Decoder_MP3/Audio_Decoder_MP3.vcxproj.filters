@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="U++">
+      <UniqueIdentifier>{f3c9dddf-358a-4714-b8ab-1ea87ed86fcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="U++\UPP_Release_x64">
+      <UniqueIdentifier>{a5d622d1-91ec-48ae-a273-9a432456a19b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="U++\UPP_Debug_x64">
+      <UniqueIdentifier>{fd3b6a6f-16bb-4e03-aa90-ca124bc072ec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Audio_Decoder_MP3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="VbrTag.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Decoder_MPG123.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Release_x64\uentry.upp">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Release_x64\uassembly.upp">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Release_x64\Decoder_MPG123.upp">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Debug_x64\uentry.upp">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Debug_x64\uassembly.upp">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Debug_x64\Decoder_MPG123.upp">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Decoder_MPG123.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="VbrTag.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="U++\Release_x64\uentry.uh">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClInclude>
+    <ClInclude Include="U++\Release_x64\uassembly.uh">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClInclude>
+    <ClInclude Include="U++\Debug_x64\uentry.uh">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClInclude>
+    <ClInclude Include="U++\Debug_x64\uassembly.uh">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

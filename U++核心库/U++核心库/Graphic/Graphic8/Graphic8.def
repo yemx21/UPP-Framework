@@ -1,0 +1,4 @@
+LIBRARY 
+EXPORTS 
+GetFeatureInfoInterface @1 NONAME
+GetFeatureInterface @2 NONAME

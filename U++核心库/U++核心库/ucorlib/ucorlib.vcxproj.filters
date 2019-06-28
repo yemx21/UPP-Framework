@@ -1,0 +1,797 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\Types">
+      <UniqueIdentifier>{ab30fd57-5482-4f84-88f5-392d9c16b11e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Types">
+      <UniqueIdentifier>{89f46e2a-2017-4f78-b0e7-3d7cb19cbb27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Reflection">
+      <UniqueIdentifier>{62f27bc7-e77f-418e-a1e0-eb68884416c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\IO">
+      <UniqueIdentifier>{b87cc605-71dd-45f9-b654-aa068e1b2735}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Common">
+      <UniqueIdentifier>{ae1eaa33-aca0-4518-99c4-22dba02e0da2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Encryption">
+      <UniqueIdentifier>{a691e2d5-ee73-401a-9ea7-162207c04c9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\IO">
+      <UniqueIdentifier>{3382f4bd-9244-4880-ba4d-c7bca110573a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Common">
+      <UniqueIdentifier>{4148bd7a-aac5-49dc-990a-284404ab0c0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Internal">
+      <UniqueIdentifier>{c9ffab74-60a6-4b94-8a18-50eaef3b01fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Encryption">
+      <UniqueIdentifier>{b61e2507-5d12-4ccd-a3dc-54b9c0dd3489}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Culture">
+      <UniqueIdentifier>{7663afbb-ce98-4512-9e9e-cfa1b600d58f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Culture">
+      <UniqueIdentifier>{882d0010-fb12-4b74-9a70-9e3f1c4b9e42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Any">
+      <UniqueIdentifier>{2bf94232-834a-4896-812f-e2053427eebf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Culture\Internal">
+      <UniqueIdentifier>{2a0e9a9f-5ab6-4eb8-bb95-f39126932cc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Types\Internal">
+      <UniqueIdentifier>{02a25492-600f-4eca-82c7-d414981849ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Reflection\Internal">
+      <UniqueIdentifier>{7cbf467e-0a0b-4fde-8aa0-03071eb259d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Reflection\TypeList">
+      <UniqueIdentifier>{bcd140e0-e82c-405e-b12f-91bda83e9ddc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Reflection">
+      <UniqueIdentifier>{b41ad495-205b-4631-acad-44db83cfd623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Reflection\Internal">
+      <UniqueIdentifier>{09fa59fb-e872-4047-9592-4678c3297816}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Memory">
+      <UniqueIdentifier>{75a1f3b1-8733-481a-8fc4-a1149bd9ef55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Types\Bases">
+      <UniqueIdentifier>{92ede3af-c52f-476c-ae76-078e53d3a8fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Types\Bases">
+      <UniqueIdentifier>{30a86d09-79e3-4560-b730-74bf02376f4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Common\Internal">
+      <UniqueIdentifier>{734bd1df-dace-4103-a569-f3d05f9045c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Runtime">
+      <UniqueIdentifier>{dd80dbab-8bfd-438c-b77c-d8b45b9db546}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Threading">
+      <UniqueIdentifier>{a3afa317-326d-42ba-b795-976eb373d5c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Threading\Internal">
+      <UniqueIdentifier>{160e706e-3f53-4081-94a4-737699fd8a27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Threading">
+      <UniqueIdentifier>{fdca6864-a5cd-4bdb-aa27-f0d3c75e07fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Culture\Internal">
+      <UniqueIdentifier>{c03eadba-ca20-44e5-afc4-5ea13200d08c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Runtime.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RuntimeTypes.cpp">
+      <Filter>源文件\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="FileReader.cpp">
+      <Filter>源文件\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="FileStream.cpp">
+      <Filter>源文件\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="FileStreamReader.cpp">
+      <Filter>源文件\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Cloner.cpp">
+      <Filter>源文件\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Converter.cpp">
+      <Filter>源文件\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="DateTime.cpp">
+      <Filter>源文件\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="DateTimeFormat.cpp">
+      <Filter>源文件\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>源文件\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="CornerRadius.cpp">
+      <Filter>源文件\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>源文件\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="InertiaString.cpp">
+      <Filter>源文件\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>源文件\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="AES.cpp">
+      <Filter>源文件\Encryption</Filter>
+    </ClCompile>
+    <ClCompile Include="MD5.cpp">
+      <Filter>源文件\Encryption</Filter>
+    </ClCompile>
+    <ClCompile Include="Encodings.cpp">
+      <Filter>源文件\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Formatter.cpp">
+      <Filter>源文件\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser.cpp">
+      <Filter>源文件\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Rect.cpp">
+      <Filter>源文件\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Size.cpp">
+      <Filter>源文件\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Thickness.cpp">
+      <Filter>源文件\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeSpan.cpp">
+      <Filter>源文件\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Calendar.cpp">
+      <Filter>源文件\Culture</Filter>
+    </ClCompile>
+    <ClCompile Include="CultureInfo.cpp">
+      <Filter>源文件\Culture</Filter>
+    </ClCompile>
+    <ClCompile Include="GregorianCalendar.cpp">
+      <Filter>源文件\Culture</Filter>
+    </ClCompile>
+    <ClCompile Include="EastAsianLunisolarCalendar.cpp">
+      <Filter>源文件\Culture</Filter>
+    </ClCompile>
+    <ClCompile Include="ChineseLunisolarCalendar.cpp">
+      <Filter>源文件\Culture</Filter>
+    </ClCompile>
+    <ClCompile Include="JapaneseLunisolarCalendar.cpp">
+      <Filter>源文件\Culture</Filter>
+    </ClCompile>
+    <ClCompile Include="JapaneseCalendar.cpp">
+      <Filter>源文件\Culture</Filter>
+    </ClCompile>
+    <ClCompile Include="TaiwanCalendar.cpp">
+      <Filter>源文件\Culture</Filter>
+    </ClCompile>
+    <ClCompile Include="TaiwanLunisolarCalendar.cpp">
+      <Filter>源文件\Culture</Filter>
+    </ClCompile>
+    <ClCompile Include="KoreanCalendar.cpp">
+      <Filter>源文件\Culture</Filter>
+    </ClCompile>
+    <ClCompile Include="KoreanLunisolarCalendar.cpp">
+      <Filter>源文件\Culture</Filter>
+    </ClCompile>
+    <ClCompile Include="HijriCalendar.cpp">
+      <Filter>源文件\Culture</Filter>
+    </ClCompile>
+    <ClCompile Include="ThaiBuddhistCalendar.cpp">
+      <Filter>源文件\Culture</Filter>
+    </ClCompile>
+    <ClCompile Include="HebrewCalendar.cpp">
+      <Filter>源文件\Culture</Filter>
+    </ClCompile>
+    <ClCompile Include="PersianCalendar.cpp">
+      <Filter>源文件\Culture</Filter>
+    </ClCompile>
+    <ClCompile Include="UmAlQuraCalendar.cpp">
+      <Filter>源文件\Culture</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeZoneInfo.cpp">
+      <Filter>源文件\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="GregorianCalendarHelper.cpp">
+      <Filter>源文件\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="CalendarHelper.cpp">
+      <Filter>源文件\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="CalendarData.cpp">
+      <Filter>源文件\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="CultureData.cpp">
+      <Filter>源文件\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeZoneInfo_impl.cpp">
+      <Filter>源文件\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="AppDomain.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayType.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="Assembly.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="Attribute.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="BuiltInAssembly.cpp">
+      <Filter>源文件\Reflection\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassInfo.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstructorInfo.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstructorType.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="Enumerators.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="EnumInfo.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory.cpp">
+      <Filter>源文件\Reflection\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldInfo.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldType.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryPtrType.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="MethodInfo.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="MethodType.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="ModifiedType.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="OperatorInfo.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="OperatorType.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertyInfo.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="PtrType.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="Reflection.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="RefType.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultType.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="Type.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeCaches.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="RefType_impl.cpp">
+      <Filter>源文件\Reflection\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="PtrType_impl.cpp">
+      <Filter>源文件\Reflection\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="NameSpace.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="Any.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>源文件\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Event.cpp">
+      <Filter>源文件\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="FloatingHelper.cpp">
+      <Filter>源文件\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="OSHelper.cpp">
+      <Filter>源文件\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionalType.cpp">
+      <Filter>源文件\Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="Version.cpp">
+      <Filter>源文件\Types\Bases</Filter>
+    </ClCompile>
+    <ClCompile Include="ITranslatable.cpp">
+      <Filter>源文件\Culture</Filter>
+    </ClCompile>
+    <ClCompile Include="Uri.cpp">
+      <Filter>源文件\Types\Bases</Filter>
+    </ClCompile>
+    <ClCompile Include="IApplication.cpp">
+      <Filter>源文件\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Delegate.cpp">
+      <Filter>源文件\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Async.cpp">
+      <Filter>源文件\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread.cpp">
+      <Filter>源文件\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="AppDomain_impl.cpp">
+      <Filter>源文件\Reflection\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="CriticalSection.cpp">
+      <Filter>源文件\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="CultureInfo_impl.cpp">
+      <Filter>源文件\Culture\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="Assembly_impl.cpp">
+      <Filter>源文件\Reflection\Internal</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="System.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AppDomain.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="Assembly.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="Attribute.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassInfo.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstructorInfo.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstructorType.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="Enumerators.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldInfo.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldType.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="MemberInfo.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryPtrType.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="MethodInfo.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="MethodType.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="OperatorInfo.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="Operators.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="OperatorType.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyInfo.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyType.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="Predicates.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="PtrType.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="Reflection.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="RefType.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultType.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="Type.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeCaches.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeConverter.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeList.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="AES.h">
+      <Filter>头文件\Encryption</Filter>
+    </ClInclude>
+    <ClInclude Include="Cloner.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Converter.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumInfo.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="Encodings.h">
+      <Filter>头文件\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="FileReader.h">
+      <Filter>头文件\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="FileStream.h">
+      <Filter>头文件\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="FileStreamReader.h">
+      <Filter>头文件\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="FloatingHelper.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Formatter.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="GuidHelper.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="IFormattable.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="MD5.h">
+      <Filter>头文件\Encryption</Filter>
+    </ClInclude>
+    <ClInclude Include="Optional.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ObservableCollection.h">
+      <Filter>头文件\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="OSHelper.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Parser.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="StringHelper.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyWords.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DateTimeFormat.h">
+      <Filter>头文件\Types\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="CultureInfo.h">
+      <Filter>头文件\Culture</Filter>
+    </ClInclude>
+    <ClInclude Include="Calendar.h">
+      <Filter>头文件\Culture</Filter>
+    </ClInclude>
+    <ClInclude Include="EastAsianLunisolarCalendar.h">
+      <Filter>头文件\Culture</Filter>
+    </ClInclude>
+    <ClInclude Include="ChineseLunisolarCalendar.h">
+      <Filter>头文件\Culture</Filter>
+    </ClInclude>
+    <ClInclude Include="GregorianCalendar.h">
+      <Filter>头文件\Culture</Filter>
+    </ClInclude>
+    <ClInclude Include="Calendars.h">
+      <Filter>头文件\Culture</Filter>
+    </ClInclude>
+    <ClInclude Include="JapaneseLunisolarCalendar.h">
+      <Filter>头文件\Culture</Filter>
+    </ClInclude>
+    <ClInclude Include="JapaneseCalendar.h">
+      <Filter>头文件\Culture</Filter>
+    </ClInclude>
+    <ClInclude Include="TaiwanCalendar.h">
+      <Filter>头文件\Culture</Filter>
+    </ClInclude>
+    <ClInclude Include="TaiwanLunisolarCalendar.h">
+      <Filter>头文件\Culture</Filter>
+    </ClInclude>
+    <ClInclude Include="KoreanCalendar.h">
+      <Filter>头文件\Culture</Filter>
+    </ClInclude>
+    <ClInclude Include="KoreanLunisolarCalendar.h">
+      <Filter>头文件\Culture</Filter>
+    </ClInclude>
+    <ClInclude Include="HijriCalendar.h">
+      <Filter>头文件\Culture</Filter>
+    </ClInclude>
+    <ClInclude Include="ThaiBuddhistCalendar.h">
+      <Filter>头文件\Culture</Filter>
+    </ClInclude>
+    <ClInclude Include="HebrewCalendar.h">
+      <Filter>头文件\Culture</Filter>
+    </ClInclude>
+    <ClInclude Include="PersianCalendar.h">
+      <Filter>头文件\Culture</Filter>
+    </ClInclude>
+    <ClInclude Include="UmAlQuraCalendar.h">
+      <Filter>头文件\Culture</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeZoneInfo_impl.h">
+      <Filter>头文件\Types\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayType.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="Any.h">
+      <Filter>头文件\Any</Filter>
+    </ClInclude>
+    <ClInclude Include="Anys.h">
+      <Filter>头文件\Any</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionalAnyVisitor.h">
+      <Filter>头文件\Any</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultVariadicAny.h">
+      <Filter>头文件\Any</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionalVariadicAny.h">
+      <Filter>头文件\Any</Filter>
+    </ClInclude>
+    <ClInclude Include="RealVariadicAny.h">
+      <Filter>头文件\Any</Filter>
+    </ClInclude>
+    <ClInclude Include="VariadicAny.h">
+      <Filter>头文件\Any</Filter>
+    </ClInclude>
+    <ClInclude Include="VariadicAnyVisitor.h">
+      <Filter>头文件\Any</Filter>
+    </ClInclude>
+    <ClInclude Include="Variant.h">
+      <Filter>头文件\Any</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>头文件\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="CornerRadius.h">
+      <Filter>头文件\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="CriticalSection.h">
+      <Filter>头文件\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="DateTime.h">
+      <Filter>头文件\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicArray.h">
+      <Filter>头文件\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="InertiaString.h">
+      <Filter>头文件\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>头文件\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>头文件\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>头文件\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Rect.h">
+      <Filter>头文件\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Result.h">
+      <Filter>头文件\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="RuntimeTypes.h">
+      <Filter>头文件\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Size.h">
+      <Filter>头文件\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Thickness.h">
+      <Filter>头文件\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeSpan.h">
+      <Filter>头文件\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeZoneInfo.h">
+      <Filter>头文件\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="CalendarData.h">
+      <Filter>头文件\Culture\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="CalendarHelper.h">
+      <Filter>头文件\Culture\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="CultureData.h">
+      <Filter>头文件\Culture\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="CultureInfo_impl.h">
+      <Filter>头文件\Culture\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="GregorianCalendarHelper.h">
+      <Filter>头文件\Culture\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="AppDomain_impl.h">
+      <Filter>头文件\Reflection\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Assembly_impl.h">
+      <Filter>头文件\Reflection\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Enumerators_impl.h">
+      <Filter>头文件\Reflection\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="BuiltInAssembly.h">
+      <Filter>头文件\Reflection\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="NameSpace_impl.h">
+      <Filter>头文件\Reflection\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="NameSpace.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory.h">
+      <Filter>头文件\Reflection\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstructorTypeList.h">
+      <Filter>头文件\Reflection\TypeList</Filter>
+    </ClInclude>
+    <ClInclude Include="FunctionTypeList.h">
+      <Filter>头文件\Reflection\TypeList</Filter>
+    </ClInclude>
+    <ClInclude Include="MethodTypeList.h">
+      <Filter>头文件\Reflection\TypeList</Filter>
+    </ClInclude>
+    <ClInclude Include="OperatorTypeList.h">
+      <Filter>头文件\Reflection\TypeList</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyTypeList.h">
+      <Filter>头文件\Reflection\TypeList</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldTypeList.h">
+      <Filter>头文件\Reflection\TypeList</Filter>
+    </ClInclude>
+    <ClInclude Include="PtrType_impl.h">
+      <Filter>头文件\Reflection\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeCaches_impl.h">
+      <Filter>头文件\Reflection\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="RefType_impl.h">
+      <Filter>头文件\Reflection\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionalType.h">
+      <Filter>头文件\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeRecycle.h">
+      <Filter>头文件\Reflection\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="ModifiedType_impl.h">
+      <Filter>头文件\Reflection\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory.h">
+      <Filter>头文件\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="IEnumerator.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ITranslatable.h">
+      <Filter>头文件\Culture</Filter>
+    </ClInclude>
+    <ClInclude Include="IApplication.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Version.h">
+      <Filter>头文件\Types\Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Uri.h">
+      <Filter>头文件\Types\Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="UriUtils.h">
+      <Filter>头文件\Types\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="ComparisonHelper.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsVersionHelper.h">
+      <Filter>头文件\Common\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Action.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread.h">
+      <Filter>头文件\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Async.h">
+      <Filter>头文件\Threading\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Delegate.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Func.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CompileTimeMap.h">
+      <Filter>头文件\Runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="Runtimes.h">
+      <Filter>头文件\Runtime</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ucorlib.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

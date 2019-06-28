@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language Name="zh-CN" >
+  <Compiler>	compiler</Compiler>
+  <PreCompiler>precompiler</PreCompiler>
+  <CodeGenerator>code generator</CodeGenerator>
+  <UseDuration>use duration of</UseDuration>
+  <Milliseconds>milliseconds</Milliseconds>
+  <Header>header file</Header>
+  <Contains>contains</Contains>
+  <Unit>units</Unit>
+  <UObject>uobject</UObject>
+  <AnalysisFinished>	analyzed</AnalysisFinished>
+  <ForHeader>for header</ForHeader>
+  <CodeGeneratorError>code generator error occurred</CodeGeneratorError>
+  <Folder>	folder</Folder>
+  <CreationFailed>create failed</CreationFailed>
+  <ReConfigUGenDir>reset UGenDir in the property page of this project</ReConfigUGenDir>
+  <TempFile>temporary file</TempFile>
+  <File>文件</File>
+  <CodeFile>code file</CodeFile>
+  <Created>created</Created>
+  <StartAnalysis>start analysis</StartAnalysis>
+  <NotExisted>not existed</NotExisted>
+  <CanNotFind>can not find</CanNotFind>
+  <CheckVCProject>check visual C++ project files</CheckVCProject>
+  <EmptyAssemblyDefination>empty assembly defination</EmptyAssemblyDefination>
+  <CheckUPPPreCompileHeaderConfiguration>check precompiler header configuration</CheckUPPPreCompileHeaderConfiguration>
+  <Generated>	generated</Generated>
+  <Compile>compile</Compile>
+  <Switch>	switch</Switch>
+  <Off>off</Off>
+</Language>

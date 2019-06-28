@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="U++文件">
+      <UniqueIdentifier>{59f9a2a9-b98c-4847-ab6e-86cc296b62dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Threading">
+      <UniqueIdentifier>{3e609325-12b6-45f1-9e6e-e0ac1cc472fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Windows">
+      <UniqueIdentifier>{02c07925-52ec-424a-a1a4-ef932d66a447}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Windows\Controls">
+      <UniqueIdentifier>{725d1341-a248-43ac-b8a2-195b9df748ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Windows">
+      <UniqueIdentifier>{35b77c20-c9c9-45c6-bafd-5f8208006eb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Windows\Controls">
+      <UniqueIdentifier>{c21f9761-0e2c-47dc-b149-231dac155b17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Windows\Controls\Interfaces">
+      <UniqueIdentifier>{a5a01d19-08ff-4aed-91df-8cade06758f0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Controls\Border.cpp">
+      <Filter>源文件\Windows\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Controls\Canvas.cpp">
+      <Filter>源文件\Windows\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Controls\Image.cpp">
+      <Filter>源文件\Windows\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Controls\Panel.cpp">
+      <Filter>源文件\Windows\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Controls\TextBlock.cpp">
+      <Filter>源文件\Windows\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Controls\Decorator.cpp">
+      <Filter>源文件\Windows\Controls</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="U++\UPlusPlus.h">
+      <Filter>U++文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UIFramework.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UIFramework_Config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Controls\Decorator.h">
+      <Filter>头文件\Windows\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Controls\Border.h">
+      <Filter>头文件\Windows\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Controls\Canvas.h">
+      <Filter>头文件\Windows\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Controls\Controls.h">
+      <Filter>头文件\Windows\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Controls\Image.h">
+      <Filter>头文件\Windows\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Controls\Panel.h">
+      <Filter>头文件\Windows\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Controls\TextBlock.h">
+      <Filter>头文件\Windows\Controls</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

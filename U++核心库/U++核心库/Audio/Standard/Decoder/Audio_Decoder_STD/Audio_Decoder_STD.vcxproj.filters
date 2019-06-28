@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="U++">
+      <UniqueIdentifier>{39e32354-1bc4-44c1-a921-106930e87dfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="U++\UPP_Debug_x64">
+      <UniqueIdentifier>{ce0ecfaf-7ac6-41c7-a8ff-dd5d2ccdd81d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="U++\UPP_Release_x64">
+      <UniqueIdentifier>{8347a63b-764b-48e2-b551-806687630d15}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Audio_Decoder_STD.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Decoder_STD.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Debug_x64\uentry.upp">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Debug_x64\uassembly.upp">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Debug_x64\Decoder_STD.upp">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="Std_Vorbis.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Std_MPC.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Std_MV.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Std_OPUS.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FLAC.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Std_APE.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Std_FLAC.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FFMPEGAPI.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Std_FFMPEG.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Release_x64\uentry.upp">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Release_x64\uassembly.upp">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Release_x64\Decoder_STD.upp">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Decoder_STD.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Decoders.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Std_Decorder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="U++\Debug_x64\uentry.uh">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClInclude>
+    <ClInclude Include="U++\Debug_x64\uassembly.uh">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClInclude>
+    <ClInclude Include="Std_Vorbis.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Std_MPC.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Std_MV.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Std_OPUS.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FLAC.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Std_APE.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Std_FLAC.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Std_FFMPEG.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FFMPEGAPI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="U++\Release_x64\uentry.uh">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClInclude>
+    <ClInclude Include="U++\Release_x64\uassembly.uh">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

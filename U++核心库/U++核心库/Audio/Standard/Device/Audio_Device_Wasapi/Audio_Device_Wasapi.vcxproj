@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{53E625E1-9BEB-4964-8182-AB8DB4AB0C76}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Audio_Device_Wasapi</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\..\..\..\Debug\</OutDir>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(UPPSDK_DIR)1000\Lib\x86;</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(UPPSDK_DIR)1000\Include;</IncludePath>
+    <UPPReflection>true</UPPReflection>
+    <UPPGenerateDoc>false</UPPGenerateDoc>
+    <UPPPreCompileHeader>Config.h</UPPPreCompileHeader>
+    <UPPAssemblyDefination>asm=Audio_Device_Wasapi,ver=1.0,pbk=63F2456A-BEA9-4781-9DBB-33648979F7D4</UPPAssemblyDefination>
+    <TargetName>Audio_Device_Wasapid</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\..\..\..\Debug_x64\</OutDir>
+    <IncludePath>$(UPPSDK_DIR)\1000\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(UPPSDK_DIR)\1000\Lib\x64;$(LibraryPath)</LibraryPath>
+    <UPPGenDir>$(ProjectDir)U++\$(Configuration)_$(Platform)\</UPPGenDir>
+    <UPPSwitchFlag>UPP_$(Configuration)_$(Platform)</UPPSwitchFlag>
+    <UPPEntry>uentry</UPPEntry>
+    <UPPAssembly>uassembly</UPPAssembly>
+    <UPPCustomEntryFunction>false</UPPCustomEntryFunction>
+    <UPPReflection>true</UPPReflection>
+    <UPPAssemblyDefination>asm=Audio_Device_Wasapi,ver=1.0,pbk=EAB9CC3B-E395-44C6-A21D-6CF712AFBA0D</UPPAssemblyDefination>
+    <UPPPreCompileHeader>$(ProjectDir)Config.h</UPPPreCompileHeader>
+    <UPPGenerateDoc>false</UPPGenerateDoc>
+    <TargetName>Audio_Device_Wasapid</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\..\..\Release\</OutDir>
+    <IncludePath>$(UPPSDK_DIR)1000\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(UPPSDK_DIR)1000\Lib\x86;$(LibraryPath)</LibraryPath>
+    <UPPReflection>true</UPPReflection>
+    <UPPGenerateDoc>false</UPPGenerateDoc>
+    <UPPPreCompileHeader>Config.h</UPPPreCompileHeader>
+    <UPPAssemblyDefination>asm=Audio_Device_Wasapi,ver=1.0,pbk=EAB9CC3B-E395-44C6-A21D-6CF712AFBA0D</UPPAssemblyDefination>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\..\..\Release_x64\</OutDir>
+    <IncludePath>$(UPPSDK_DIR)\1000\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(UPPSDK_DIR)\1000\Lib\x64;$(LibraryPath)</LibraryPath>
+    <UPPGenDir>$(ProjectDir)U++\$(Configuration)_$(Platform)\</UPPGenDir>
+    <UPPSwitchFlag>UPP_$(Configuration)_$(Platform)</UPPSwitchFlag>
+    <UPPEntry>uentry</UPPEntry>
+    <UPPAssembly>uassembly</UPPAssembly>
+    <UPPCustomEntryFunction>false</UPPCustomEntryFunction>
+    <UPPReflection>true</UPPReflection>
+    <UPPAssemblyDefination>asm=Audio_Device_Wasapi,ver=1.0,pbk=EAB9CC3B-E395-44C6-A21D-6CF712AFBA0D</UPPAssemblyDefination>
+    <UPPPreCompileHeader>$(ProjectDir)Config.h</UPPPreCompileHeader>
+    <UPPGenerateDoc>false</UPPGenerateDoc>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UGenDir>U++</UGenDir>
+    <UPPGenerateAssemblyEntry>true</UPPGenerateAssemblyEntry>
+    <UAssemblyEntry>uentry</UAssemblyEntry>
+    <UPPCustomAssemblyEntryFunction>false</UPPCustomAssemblyEntryFunction>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;NOMINMAX;REFLECTION_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)U++\</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Winmm.lib;MMDevAPI.lib;MFuuid.lib;MFReadWrite.lib;MFplat.lib;uuid.lib;ucorlibd.lib;AudioSharedd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;NOMINMAX;REFLECTION_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Winmm.lib;ucorlibd.lib;AudioSharedd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;AUDIO_DEVICE_STD_EXPORTS;NOMINMAX;REFLECTION_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <StringPooling>true</StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Winmm.lib;ucorlib.lib;AudioShared.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;AUDIO_DEVICE_STD_EXPORTS;NOMINMAX;REFLECTION_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <StringPooling>true</StringPooling>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Winmm.lib;ucorlib.lib;AudioShared.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Audio_Device_Wasapi.cpp" />
+    <ClCompile Include="Device_Wasapi.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="WasapiPipe.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ItemGroup>
+    <PropertyPageSchema Include="$(UPPSDK_DIR)\1000\VCBuild\Reflection.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="Device_Wasapi.h" />
+    <ClInclude Include="WasapiPipe.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="U++\Debug_x64\uentry.uh">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Debug_x64\uentry.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="U++\Debug_x64\uassembly.uh">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Debug_x64\uassembly.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Debug_x64\Device_Wasapi.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="U++\Release_x64\uentry.uh">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Release_x64\uentry.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="U++\Release_x64\uassembly.uh">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Release_x64\uassembly.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Release_x64\Device_Wasapi.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

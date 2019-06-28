@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2C56BCF1-E837-4FEA-815E-173CFBE6F1B2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Uaml</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v142</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v142</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <UGenDir>U++</UGenDir>
+    <UPPGenerateAssemblyEntry>true</UPPGenerateAssemblyEntry>
+    <UAssemblyEntry>uentry</UAssemblyEntry>
+    <CustomAssemblyEntryFunction>true</CustomAssemblyEntryFunction>
+    <UCustomAssemblyEntry>ucustomentry</UCustomAssemblyEntry>
+    <UPPCustomAssemblyEntryFunction>false</UPPCustomAssemblyEntryFunction>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\..\Debug\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(UPPSDK_DIR)1000\Include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(UPPSDK_DIR)1000\Lib\x86\</LibraryPath>
+    <UPPReflection>true</UPPReflection>
+    <UPPGenerateDoc>false</UPPGenerateDoc>
+    <UPPPreCompileHeader>Uaml_Config.h</UPPPreCompileHeader>
+    <UPPAssemblyDefination>asm=Uaml,ver=1.0,pbk=AB595379-8AAA-40E8-915F-B2F1043445C4</UPPAssemblyDefination>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\..\..\Debug_x64\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <TargetName>Uamld</TargetName>
+    <UPPReflection>true</UPPReflection>
+    <UPPAssemblyDefination>asm=Uaml,ver=1.0,pbk=AB595379-8AAA-40E8-915F-B2F1043445C4</UPPAssemblyDefination>
+    <UPPPreCompileHeader>Uaml_Config.h</UPPPreCompileHeader>
+    <UPPGenerateDoc>false</UPPGenerateDoc>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(UPPSDK_DIR)1000\Include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(UPPSDK_DIR)1000\Lib\x64\</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <UPPReflection>true</UPPReflection>
+    <UPPAssemblyDefination>asm=Uaml,ver=1.0,pbk=AB595379-8AAA-40E8-915F-B2F1043445C4</UPPAssemblyDefination>
+    <UPPPreCompileHeader>Uaml_Config.h</UPPPreCompileHeader>
+    <OutDir>..\..\..\Release_x64\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(UPPSDK_DIR)1000\Include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(UPPSDK_DIR)1000\Lib\x64\</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;UAML_EXPORTS;REFLECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\U++核心库\U++核心库\Graphic\UICore</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ucorlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;UAML_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;_USRDLL;UAML_EXPORTS;REFLECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\..\Graphic\UICore</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ucorlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\Graphic\UICore</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN64;NDEBUG;_WINDOWS;_USRDLL;UAML_EXPORTS;REFLECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ucorlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="UamlAssembly.h" />
+    <ClInclude Include="UamlAssemblyManager.h" />
+    <ClInclude Include="UamlError.h" />
+    <ClInclude Include="UamlGlobalTable.h" />
+    <ClInclude Include="UamlNamespace.h" />
+    <ClInclude Include="Uaml_Config.h" />
+    <ClInclude Include="UamlReader.h" />
+    <ClInclude Include="U++\UPlusPlus.h" />
+    <ClInclude Include="UamlServiceManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Uaml.cpp" />
+    <ClCompile Include="UamlAssembly.cpp" />
+    <ClCompile Include="UamlAssemblyManager.cpp" />
+    <ClCompile Include="UamlNamespace.cpp" />
+    <ClCompile Include="UamlReader.cpp" />
+    <ClCompile Include="UamlServiceManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(UPPSDK_DIR)1000\VCBuild\Compiler.xml" />
+    <PropertyPageSchema Include="$(UPPSDK_DIR)1000\VCBuild\Reflection.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Graphic\UICore\UICore.vcxproj">
+      <Project>{58581e2a-8cb3-4b64-8412-01c33cc051cc}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

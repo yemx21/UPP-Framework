@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A4BD3A85-3D1D-41CB-B71D-DB020723EE48}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Audio_Decoder_STD</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\..\..\..\Debug\</OutDir>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(UPPSDK_DIR)1000\Lib\x86;</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(UPPSDK_DIR)1000\Include;</IncludePath>
+    <UPPReflection>true</UPPReflection>
+    <UPPGenerateDoc>false</UPPGenerateDoc>
+    <UPPPreCompileHeader>Config.h</UPPPreCompileHeader>
+    <UPPAssemblyDefination>asm=Audio_Decoder_STD,ver=1.0,pbk=95ECD38A-3D32-4BA6-BD60-B6F96F5BF50C</UPPAssemblyDefination>
+    <TargetName>Audio_Decoder_STDd</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\..\..\..\Debug_x64\</OutDir>
+    <IncludePath>$(UPPSDK_DIR)\1000\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(UPPSDK_DIR)\1000\Lib\x64;$(LibraryPath)</LibraryPath>
+    <UPPGenDir>$(ProjectDir)U++\$(Configuration)_$(Platform)\</UPPGenDir>
+    <UPPSwitchFlag>UPP_$(Configuration)_$(Platform)</UPPSwitchFlag>
+    <UPPEntry>uentry</UPPEntry>
+    <UPPAssembly>uassembly</UPPAssembly>
+    <UPPCustomEntryFunction>true</UPPCustomEntryFunction>
+    <UPPReflection>true</UPPReflection>
+    <UPPAssemblyDefination>asm=Audio_Decoder_STD,ver=1.0,pbk=95ECD38A-3D32-4BA6-BD60-B6F96F5BF50C</UPPAssemblyDefination>
+    <UPPPreCompileHeader>$(ProjectDir)Config.h</UPPPreCompileHeader>
+    <UPPGenerateDoc>false</UPPGenerateDoc>
+    <TargetName>Audio_Decoder_STDd</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\..\..\Release\</OutDir>
+    <IncludePath>$(UPPSDK_DIR)1000\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(UPPSDK_DIR)1000\Lib\x86;$(LibraryPath)</LibraryPath>
+    <UPPReflection>true</UPPReflection>
+    <UPPGenerateDoc>false</UPPGenerateDoc>
+    <UPPPreCompileHeader>Config.h</UPPPreCompileHeader>
+    <UPPAssemblyDefination>asm=Audio_Decoder_STD,ver=1.0,pbk=95ECD38A-3D32-4BA6-BD60-B6F96F5BF50C</UPPAssemblyDefination>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\..\..\Release_x64\</OutDir>
+    <IncludePath>$(UPPSDK_DIR)\1000\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(UPPSDK_DIR)\1000\Lib\x64;$(LibraryPath)</LibraryPath>
+    <UPPGenDir>$(ProjectDir)U++\$(Configuration)_$(Platform)\</UPPGenDir>
+    <UPPSwitchFlag>UPP_$(Configuration)_$(Platform)</UPPSwitchFlag>
+    <UPPEntry>uentry</UPPEntry>
+    <UPPAssembly>uassembly</UPPAssembly>
+    <UPPCustomEntryFunction>true</UPPCustomEntryFunction>
+    <UPPReflection>true</UPPReflection>
+    <UPPAssemblyDefination>asm=Audio_Decoder_STD,ver=1.0,pbk=95ECD38A-3D32-4BA6-BD60-B6F96F5BF50C</UPPAssemblyDefination>
+    <UPPPreCompileHeader>$(ProjectDir)Config.h</UPPPreCompileHeader>
+    <UPPGenerateDoc>false</UPPGenerateDoc>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UGenDir>U++</UGenDir>
+    <UPPGenerateAssemblyEntry>true</UPPGenerateAssemblyEntry>
+    <UAssemblyEntry>uentry</UAssemblyEntry>
+    <UPPCustomAssemblyEntryFunction>true</UPPCustomAssemblyEntryFunction>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOMINMAX;_USRDLL;REFLECTION_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\..\Third Party\libvorbis\;..\..\..\..\Third Party\libogg\include\;..\..\..\..\Third Party\libogg\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)U++\</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ucorlibd.lib;AudioSharedd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN64;_DEBUG;PLATFORM_WINDOWS;_WINDOWS;_USRDLL;AUDIO_DECODER_STD_EXPORTS;NOMINMAX;REFLECTION_SUPPORT;PLATFORM_x64;FLAC__NO_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\..\Third Party\libvorbis\;..\..\..\..\Third Party\libogg\include\;..\..\..\..\Third Party\libogg\;..\..\..\..\Third Party\flac-1.3.1\include;..\..\..\..\Third Party\flac-1.3.1\src\share\replaygain_synthesis;..\..\..\..\Third Party\flac-1.3.1\src\;..\..\..\..\Third Party\libmpc\include\;..\..\..\..\Third Party\MAC_SDK_444\Source\Shared\;..\..\..\..\Third Party\MAC_SDK_444\Source\MACLib\;..\..\..\..\Third Party\opus\include\;..\..\..\..\Third Party\opusfile\include\;..\..\..\..\Third Party\WavPack-5.1.0\include\;..\..\..\..\..\..\ffmpeg_upp\include\;..\..\..\..\WinEnv\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ucorlibd.lib;AudioSharedd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;AUDIO_DECODER_STD_EXPORTS;NOMINMAX;REFLECTION_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <StringPooling>true</StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ucorlib.lib;AudioShared.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN64;NDEBUG;_WINDOWS;_USRDLL;AUDIO_DECODER_STD_EXPORTS;NOMINMAX;REFLECTION_SUPPORT;FLAC__NO_DLL;PLATFORM_WINDOWS;PLATFORM_x64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>..\..\..\..\Third Party\libvorbis\;..\..\..\..\Third Party\libogg\include\;..\..\..\..\Third Party\libogg\;..\..\..\..\Third Party\flac-1.3.1\include;..\..\..\..\Third Party\flac-1.3.1\src\share\replaygain_synthesis;..\..\..\..\Third Party\flac-1.3.1\src\;..\..\..\..\Third Party\libmpc\include\;..\..\..\..\Third Party\MAC_SDK_444\Source\Shared\;..\..\..\..\Third Party\MAC_SDK_444\Source\MACLib\;..\..\..\..\Third Party\opus\include\;..\..\..\..\Third Party\opusfile\include\;..\..\..\..\Third Party\WavPack-5.1.0\include\;..\..\..\..\..\..\ffmpeg_upp\include\;..\..\..\..\WinEnv\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <StringPooling>true</StringPooling>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ucorlib.lib;AudioShared.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Audio_Decoder_STD.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Decoder_STD.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="Decoder_STD.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ItemGroup>
+    <PropertyPageSchema Include="$(UPPSDK_DIR)\1000\VCBuild\Reflection.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Decoders.h" />
+    <ClInclude Include="FFMPEGAPI.h" />
+    <ClInclude Include="FLAC.h" />
+    <ClInclude Include="Std_APE.h" />
+    <ClInclude Include="Std_Decorder.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Third Party\flac-1.3.1\src\libFLAC\libFLAC_static.vcxproj">
+      <Project>{4cefbc84-c215-11db-8314-0800200c9a66}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Third Party\flac-1.3.1\src\share\win_utf8_io\win_utf8_io_static.vcxproj">
+      <Project>{4cefbe02-c215-11db-8314-0800200c9a66}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Third Party\libmpc\win32\libmpcdec.vcxproj">
+      <Project>{4c5362cd-0bf2-4b3b-971b-8293eb1a1dc3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Third Party\libogg\win32\VS2010\libogg_static.vcxproj">
+      <Project>{15cbfeff-7965-41f5-b4e2-21e8795c9159}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Third Party\libvorbis\win32\VS2010\libvorbisfile\libvorbisfile_dynamic.vcxproj">
+      <Project>{cebde98b-a6aa-46e6-bc79-faaf823db9ec}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Third Party\libvorbis\win32\VS2010\libvorbis\libvorbis_static.vcxproj">
+      <Project>{3a214e06-b95e-4d61-a291-1f8df2ec10fd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Third Party\MAC_SDK_444\Source\Projects\VS2017\MACLib\MACLib.vcxproj">
+      <Project>{21bf980f-c022-4dcc-9250-7c73528e422b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Third Party\opusfile\win32\VS2010\opusfile.vcxproj">
+      <Project>{1a4b5203-52eb-4805-9511-84b1bd094fca}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Third Party\opus\win32\VS2015\opus.vcxproj">
+      <Project>{219ec965-228a-1824-174d-96449d05f88a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Third Party\WavPack-5.1.0\src\libwavpack.vcxproj">
+      <Project>{5cccb9cf-0384-458f-ba08-72b73866840f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\WinEnv\WinEnv.vcxproj">
+      <Project>{8114ff44-de25-438e-9960-07fa41216810}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Std_FFMPEG.h" />
+    <ClInclude Include="Std_FLAC.h" />
+    <ClInclude Include="Std_MPC.h" />
+    <ClInclude Include="Std_MV.h" />
+    <ClInclude Include="Std_OPUS.h" />
+    <ClInclude Include="Std_Vorbis.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FFMPEGAPI.cpp" />
+    <ClCompile Include="FLAC.cpp" />
+    <ClCompile Include="Std_APE.cpp" />
+    <ClCompile Include="Std_FFMPEG.cpp" />
+    <ClCompile Include="Std_FLAC.cpp" />
+    <ClCompile Include="Std_MPC.cpp" />
+    <ClCompile Include="Std_MV.cpp" />
+    <ClCompile Include="Std_OPUS.cpp" />
+    <ClCompile Include="Std_Vorbis.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="U++\Debug_x64\uentry.uh">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Debug_x64\uentry.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="U++\Debug_x64\uassembly.uh">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Debug_x64\uassembly.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Debug_x64\Decoder_STD.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="U++\Release_x64\uentry.uh">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Release_x64\uentry.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="U++\Release_x64\uassembly.uh">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Release_x64\uassembly.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Release_x64\Decoder_STD.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

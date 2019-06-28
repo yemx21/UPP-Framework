@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{96853408-8FCF-4F61-A407-BACE9BD3F305}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Graphic8</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v142</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v142</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\..\Debug\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(UPPSDK_DIR)1000\Include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(UPPSDK_DIR)1000\Lib\x86\</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\Release\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\..\..\Debug_x64\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <TargetName>Graphic8</TargetName>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(UPPSDK_DIR)1000\Include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(UPPSDK_DIR)1000\Lib\x64\</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\..\..\Release_x64\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(UPPSDK_DIR)1000\Include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(UPPSDK_DIR)1000\Lib\x64\</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;REFLECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>Graphic8.def</ModuleDefinitionFile>
+      <AdditionalDependencies>ucorlibd.lib;windowscodecs.lib;d2d1.lib;d3d11.lib;dxgi.lib;dxguid.lib;dwrite.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;GRAPHIC8_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>windowscodecs.lib;d2d1.lib;d3d11.lib;dxgi.lib;dxguid.lib;dwrite.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>Graphic8.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;_USRDLL;REFLECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ucorlibd.lib;windowscodecs.lib;d2d1.lib;d3d11.lib;dxgi.lib;dxguid.lib;dwrite.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>Graphic8.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN64;NDEBUG;_WINDOWS;_USRDLL;REFLECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ucorlib.lib;windowscodecs.lib;d2d1.lib;d3d11.lib;dxgi.lib;dxguid.lib;dwrite.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>Graphic8.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Brush\BitmapBrush.h" />
+    <ClInclude Include="Brush\Brush.h" />
+    <ClInclude Include="Brush\Brushes.h" />
+    <ClInclude Include="Brush\GradientStopCollection.h" />
+    <ClInclude Include="Brush\LinearGradientBrush.h" />
+    <ClInclude Include="Brush\Pen.h" />
+    <ClInclude Include="Brush\RadialGradientBrush.h" />
+    <ClInclude Include="Brush\SolidColorBrush.h" />
+    <ClInclude Include="Brush\StrokeStyle.h" />
+    <ClInclude Include="Device.h" />
+    <ClInclude Include="Effects\BlurEffect.h" />
+    <ClInclude Include="Effects\DropShadowEffect.h" />
+    <ClInclude Include="Effects\EffectResource.h" />
+    <ClInclude Include="Effects\Effects.h" />
+    <ClInclude Include="Effects\ElementEffect.h" />
+    <ClInclude Include="Effects\SaturationEffect.h" />
+    <ClInclude Include="Geometry\ArcSegment.h" />
+    <ClInclude Include="Geometry\BezierSegment.h" />
+    <ClInclude Include="Geometry\CombinedGeometry.h" />
+    <ClInclude Include="Geometry\Ellipse.h" />
+    <ClInclude Include="Geometry\Figure.h" />
+    <ClInclude Include="Geometry\Geometries.h" />
+    <ClInclude Include="Geometry\Geometry.h" />
+    <ClInclude Include="Geometry\GeometryGroup.h" />
+    <ClInclude Include="Geometry\ISegment.h" />
+    <ClInclude Include="Geometry\LineSegment.h" />
+    <ClInclude Include="Geometry\PathGeometry.h" />
+    <ClInclude Include="Geometry\QuadraticBezierSegment.h" />
+    <ClInclude Include="Geometry\Rectangle.h" />
+    <ClInclude Include="Geometry\RoundedRectangle.h" />
+    <ClInclude Include="Geometry\StreamGeometry.h" />
+    <ClInclude Include="Geometry\TransformedGeometry.h" />
+    <ClInclude Include="Header.h" />
+    <ClInclude Include="Media\Bitmap.h" />
+    <ClInclude Include="Rendering\BrushTransformToBounds.h" />
+    <ClInclude Include="Rendering\ClipCommand.h" />
+    <ClInclude Include="Rendering\DrawCommand.h" />
+    <ClInclude Include="Rendering\DrawEffectCommand.h" />
+    <ClInclude Include="Rendering\DrawImageCommand.h" />
+    <ClInclude Include="Rendering\DrawTextCommand.h" />
+    <ClInclude Include="Rendering\ExecutableBase.h" />
+    <ClInclude Include="Rendering\FillCommand.h" />
+    <ClInclude Include="Rendering\RenderContext.h" />
+    <ClInclude Include="Rendering\RenderState.h" />
+    <ClInclude Include="Rendering\StrokeCommand.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Text\TextFormat.h" />
+    <ClInclude Include="Text\TextLayout.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Brush\BitmapBrush.cpp" />
+    <ClCompile Include="Brush\Brush.cpp" />
+    <ClCompile Include="Brush\GradientStopCollection.cpp" />
+    <ClCompile Include="Brush\LinearGradientBrush.cpp" />
+    <ClCompile Include="Brush\Pen.cpp" />
+    <ClCompile Include="Brush\RadialGradientBrush.cpp" />
+    <ClCompile Include="Brush\SolidColorBrush.cpp" />
+    <ClCompile Include="Brush\StrokeStyle.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Effects\BlurEffect.cpp" />
+    <ClCompile Include="Effects\DropShadowEffect.cpp" />
+    <ClCompile Include="Effects\EffectResource.cpp" />
+    <ClCompile Include="Effects\ElementEffect.cpp" />
+    <ClCompile Include="Effects\SaturationEffect.cpp" />
+    <ClCompile Include="Feature8.cpp" />
+    <ClCompile Include="Geometry\ArcSegment.cpp" />
+    <ClCompile Include="Geometry\BezierSegment.cpp" />
+    <ClCompile Include="Geometry\CombinedGeometry.cpp" />
+    <ClCompile Include="Geometry\Ellipse.cpp" />
+    <ClCompile Include="Geometry\Figure.cpp" />
+    <ClCompile Include="Geometry\Geometry.cpp" />
+    <ClCompile Include="Geometry\GeometryGroup.cpp" />
+    <ClCompile Include="Geometry\LineSegment.cpp" />
+    <ClCompile Include="Geometry\PathGeometry.cpp" />
+    <ClCompile Include="Geometry\QuadraticBezierSegment.cpp" />
+    <ClCompile Include="Geometry\Rectangle.cpp" />
+    <ClCompile Include="Geometry\RoundedRectangle.cpp" />
+    <ClCompile Include="Geometry\StreamGeometry.cpp" />
+    <ClCompile Include="Geometry\TransformedGeometry.cpp" />
+    <ClCompile Include="Media\Bitmap.cpp" />
+    <ClCompile Include="Rendering\DrawEffectCommand.cpp" />
+    <ClCompile Include="Rendering\DrawImageCommand.cpp" />
+    <ClCompile Include="Rendering\DrawTextCommand.cpp" />
+    <ClCompile Include="Rendering\FillCommand.cpp" />
+    <ClCompile Include="Rendering\RenderContext.cpp" />
+    <ClCompile Include="Rendering\StrokeCommand.cpp" />
+    <ClCompile Include="Text\TextFormat.cpp" />
+    <ClCompile Include="Text\TextLayout.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graphic8.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GraphicCore\GraphicCore.vcxproj">
+      <Project>{1295eebf-3bbe-43a8-ad9c-3c5f49ebbe74}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\UICore\UICore.vcxproj">
+      <Project>{58581e2a-8cb3-4b64-8412-01c33cc051cc}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

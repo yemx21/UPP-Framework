@@ -1,0 +1,17 @@
+#pragma once
+
+#include "ArcSegment.h"
+#include "BezierSegment.h"
+#include "CombinedGeometry.h"
+#include "Ellipse.h"
+#include "Figure.h"
+#include "Geometry.h"
+#include "ISegment.h"
+#include "LineSegment.h"
+#include "PathGeometry.h"
+#include "StreamGeometry.h"
+#include "QuadraticBezierSegment.h"
+#include "RoundedRectangle.h"
+#include "Rectangle.h"
+#include "TransformedGeometry.h"
+#include "GeometryGroup.h"

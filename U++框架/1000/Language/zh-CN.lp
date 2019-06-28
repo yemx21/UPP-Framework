@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language Name="zh-CN" >
+  <Compiler>编译器</Compiler>
+  <PreCompiler>预编译器</PreCompiler>
+  <CodeGenerator>代码生成器</CodeGenerator>
+  <UseDuration>用时</UseDuration>
+  <Milliseconds>毫秒</Milliseconds>
+  <Header>头文件</Header>
+  <Contains>包含</Contains>
+  <Unit>个</Unit>
+  <UObject>U++对象</UObject>
+  <AnalysisFinished>分析结束</AnalysisFinished>
+  <ForHeader>针对头文件</ForHeader>
+  <ErrorOccurred>发生错误</ErrorOccurred>
+  <Folder>文件夹</Folder>
+  <CreationFailed>创建失败</CreationFailed>
+  <ReConfigUGenDir>重新设置U++代码生成目录文件夹名称</ReConfigUGenDir>
+  <TempFile>临时文件</TempFile>
+  <File>文件</File>
+  <CodeFile>代码文件</CodeFile>
+  <Created>已创建</Created>
+  <StartAnalysis>开始分析</StartAnalysis>
+  <NotExisted>头文件不存在</NotExisted>
+  <CanNotFind>无法找到</CanNotFind>
+  <CheckVCProject>检查VisualC++工程</CheckVCProject>
+  <EmptyAssemblyDefination>空程序集定义</EmptyAssemblyDefination>
+  <CheckUPPPreCompileHeaderConfiguration>检查预编译头文件设置</CheckUPPPreCompileHeaderConfiguration>
+  <Generated>已生成</Generated>
+  <Compile>编译</Compile>
+  <Switch>开关</Switch>
+  <Off>关闭</Off>
+  <ParseFailed>解析失败</ParseFailed>
+  <Task>任务</Task>
+  <End>结束</End>
+</Language>

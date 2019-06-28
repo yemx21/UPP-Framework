@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\Components">
+      <UniqueIdentifier>{cee0e1be-fe55-40a9-bef1-0df1a5cd483e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Components">
+      <UniqueIdentifier>{b7a81599-03b9-4e14-8bf6-756875655c15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Pipes">
+      <UniqueIdentifier>{d3351aaa-c763-493e-8862-218b4fc95559}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Pipes">
+      <UniqueIdentifier>{17a69b14-c304-4978-9e95-da636c523440}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Transform">
+      <UniqueIdentifier>{d6f2eb97-6312-41ec-b969-683ebdec138e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Transform">
+      <UniqueIdentifier>{68d8c306-8dc0-4f08-8058-ca0e6644b3e5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Audio.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FFT.cpp">
+      <Filter>源文件\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioAnalyzer.cpp">
+      <Filter>源文件\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioGainAnalyzer.cpp">
+      <Filter>源文件\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="PluginCenter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioTree.cpp">
+      <Filter>源文件\Pipes</Filter>
+    </ClCompile>
+    <ClCompile Include="StandardDSP.cpp">
+      <Filter>源文件\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioTimeEQ.cpp">
+      <Filter>源文件\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="DSPManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>源文件\Pipes</Filter>
+    </ClCompile>
+    <ClCompile Include="Dither.cpp">
+      <Filter>源文件\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioResampler.cpp">
+      <Filter>源文件\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioChannelLayoutConverter.cpp">
+      <Filter>源文件\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioLimiter.cpp">
+      <Filter>源文件\Components</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FFT.h">
+      <Filter>头文件\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioAnalyzer.h">
+      <Filter>头文件\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioGainAnalyzer.h">
+      <Filter>头文件\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioLimiter.h">
+      <Filter>头文件\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioPool.h">
+      <Filter>头文件\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PluginCenter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioTree.h">
+      <Filter>头文件\Pipes</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioTimeEQ.h">
+      <Filter>头文件\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="StandardDSP.h">
+      <Filter>头文件\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="DSPManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>头文件\Pipes</Filter>
+    </ClInclude>
+    <ClInclude Include="ID128.h">
+      <Filter>头文件\Pipes</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Dither.h">
+      <Filter>头文件\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioResampler.h">
+      <Filter>头文件\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioChannelLayoutConverter.h">
+      <Filter>头文件\Transform</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

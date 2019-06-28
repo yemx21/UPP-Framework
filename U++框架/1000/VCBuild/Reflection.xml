@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectSchemaDefinitions xmlns="clr-namespace:Microsoft.Build.Framework.XamlTypes;assembly=Microsoft.Build.Framework" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <Rule Name="UReflection" PageTemplate="generic">
+    <Rule.DisplayName>
+      <sys:String>U++支持</sys:String>
+    </Rule.DisplayName>
+    <Rule.Categories>
+      <Category Name="Features">
+        <Category.DisplayName>
+          <sys:String>编译特性</sys:String>
+        </Category.DisplayName>
+      </Category>
+      <Category Name="Reflection">
+        <Category.DisplayName>
+          <sys:String>反射特性</sys:String>
+        </Category.DisplayName>
+      </Category>
+      <Category Name="Document">
+        <Category.DisplayName>
+          <sys:String>文档</sys:String>
+        </Category.DisplayName>
+      </Category>
+    </Rule.Categories>
+    <Rule.DataSource>
+      <DataSource Persistence="ProjectFile" ItemType="" HasConfigurationCondition="true"/>
+    </Rule.DataSource>
+    <StringProperty Name="UPPGenDir" Category="Features">
+      <StringProperty.DisplayName>
+        <sys:String>编译器生成代码文件夹</sys:String>
+      </StringProperty.DisplayName>
+      <StringProperty.Description>
+        <sys:String>
+          指定编译器输出文件夹路径
+        </sys:String>
+      </StringProperty.Description>
+    </StringProperty>
+    <StringProperty Name="UPPSwitchFlag" Category="Features">
+      <StringProperty.DisplayName>
+        <sys:String>编译器宏开关</sys:String>
+      </StringProperty.DisplayName>
+      <StringProperty.Description>
+        <sys:String>
+          指定编译器宏开关用于应对不同VC工程配置环境
+        </sys:String>
+      </StringProperty.Description>
+    </StringProperty>
+    <StringProperty Name="UPPEntry" Category="Features">
+      <StringProperty.DisplayName>
+        <sys:String>动态链接库入口代码文件名</sys:String>
+      </StringProperty.DisplayName>
+      <StringProperty.Description>
+        <sys:String>
+          指定编译器输出动态链接库入口代码文件路径
+        </sys:String>
+      </StringProperty.Description>
+    </StringProperty>
+    <StringProperty Name="UPPAssembly" Category="Features">
+      <StringProperty.DisplayName>
+        <sys:String>程序集入口代码文件名</sys:String>
+      </StringProperty.DisplayName>
+      <StringProperty.Description>
+        <sys:String>
+          指定编译器输出程序集入口代码文件路径
+        </sys:String>
+      </StringProperty.Description>
+    </StringProperty>
+    <BoolProperty Switch="UPP:CustomEntryFunction" Name="UPPCustomEntryFunction" Category="Features">
+      <BoolProperty.DisplayName>
+        <sys:String>自动生成加(卸)载自定义函数代码文件</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>
+          开启此编译开关，编译器将自动生成加(卸)载自定义函数文件，加(卸)载函数需要开发者在第一次编译结束后实现。
+        </sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Switch="UPP:Reflection" Name="UPPReflection" Category="Reflection">
+      <BoolProperty.DisplayName> 
+        <sys:String>编译元数据</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>
+          关闭此支持将不会编译元数据
+         </sys:String>
+    </BoolProperty.Description>
+    </BoolProperty>
+    <StringListProperty Name="UPPAssemblyDefination" Category="Reflection">
+      <StringListProperty.DisplayName>
+        <sys:String>程序集信息</sys:String>
+      </StringListProperty.DisplayName>
+      <StringListProperty.Description>
+        <sys:String>
+          指定程序集的信息，其格式为asm=程序集名称,ver=版本,pbk=公匙;...。例如: asm=Asm1,ver=1.0,pbk=F0B831F6-4F85-4F78-BC18-35310413670F;asm=Asm2,Ver=1.2,pbk=694B5754-99AD-4454-A558-38DA7789912C;
+        </sys:String>
+      </StringListProperty.Description>
+    </StringListProperty>
+    <StringProperty Subtype="file" Name="UPPPreCompileHeader" Category="Reflection">
+      <StringProperty.DisplayName>
+        <sys:String>编译器预编译头文件路径</sys:String>
+      </StringProperty.DisplayName>
+      <StringProperty.Description>
+        <sys:String>
+          指定编译器预编译头文件路径，该文件可不参与VC工程的编译。建议将工程内所有引用的头文件定义在该预编译头文件中。
+        </sys:String>
+      </StringProperty.Description>
+    </StringProperty>
+    <BoolProperty Switch="UPP:GenerateDoc" Name="UPPGenerateDoc" Category="Document">
+      <BoolProperty.DisplayName>
+        <sys:String>生成文档</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>
+          根据反射标记和反射特性生成元数据文档
+        </sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <StringProperty Subtype="file" Name="UPPDocFile" Category="Document">
+      <StringProperty.DisplayName>
+        <sys:String>文档路径</sys:String>
+      </StringProperty.DisplayName>
+      <StringProperty.Description>
+        <sys:String>
+          指定输出文件路径
+        </sys:String>
+      </StringProperty.Description>
+    </StringProperty>
+  </Rule>
+</ProjectSchemaDefinitions>

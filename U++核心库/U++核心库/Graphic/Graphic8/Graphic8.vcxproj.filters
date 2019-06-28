@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\Brush">
+      <UniqueIdentifier>{37838424-7fc0-4549-9fea-35712a3ebaf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Geometry">
+      <UniqueIdentifier>{478a4189-d309-49d9-b8c9-5f8a008bfbcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Text">
+      <UniqueIdentifier>{18dd46f3-7410-4ebf-af3f-f477234fe9be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Rendering">
+      <UniqueIdentifier>{a0fbbc93-3b7a-4821-8402-bb5b842fdd3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Media">
+      <UniqueIdentifier>{96bb2cb6-5fe3-4990-9250-98fd364bd420}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Effect">
+      <UniqueIdentifier>{59116523-2007-4162-b94a-682f44342c7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Brush">
+      <UniqueIdentifier>{dd499bea-5455-4789-816e-c3a78023c50e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Geometry">
+      <UniqueIdentifier>{351433ce-fa4d-4efe-914c-b3d1dd3083d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Media">
+      <UniqueIdentifier>{6b536167-e9db-4994-b77a-105520dd7e62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Effect">
+      <UniqueIdentifier>{1d7fce0d-4b06-4609-9406-8696cd475096}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Rendering">
+      <UniqueIdentifier>{e7505705-e0fe-42cb-94d7-cf65f8208ee8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Text">
+      <UniqueIdentifier>{93c9ce0a-e3be-4341-9631-09a5c0a2e671}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Media\Bitmap.h">
+      <Filter>头文件\Media</Filter>
+    </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush\BitmapBrush.h">
+      <Filter>头文件\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush\Brushes.h">
+      <Filter>头文件\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush\GradientStopCollection.h">
+      <Filter>头文件\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush\LinearGradientBrush.h">
+      <Filter>头文件\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush\Pen.h">
+      <Filter>头文件\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush\RadialGradientBrush.h">
+      <Filter>头文件\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush\SolidColorBrush.h">
+      <Filter>头文件\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush\StrokeStyle.h">
+      <Filter>头文件\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush\Brush.h">
+      <Filter>头文件\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Ellipse.h">
+      <Filter>头文件\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Figure.h">
+      <Filter>头文件\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Geometry.h">
+      <Filter>头文件\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\ISegment.h">
+      <Filter>头文件\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\LineSegment.h">
+      <Filter>头文件\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\PathGeometry.h">
+      <Filter>头文件\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\QuadraticBezierSegment.h">
+      <Filter>头文件\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\RoundedRectangle.h">
+      <Filter>头文件\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\TransformedGeometry.h">
+      <Filter>头文件\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Text\TextFormat.h">
+      <Filter>头文件\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Text\TextLayout.h">
+      <Filter>头文件\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\CombinedGeometry.h">
+      <Filter>头文件\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\ArcSegment.h">
+      <Filter>头文件\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\BezierSegment.h">
+      <Filter>头文件\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Effects\BlurEffect.h">
+      <Filter>头文件\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Effects\DropShadowEffect.h">
+      <Filter>头文件\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Effects\EffectResource.h">
+      <Filter>头文件\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Effects\ElementEffect.h">
+      <Filter>头文件\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Effects\SaturationEffect.h">
+      <Filter>头文件\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\BrushTransformToBounds.h">
+      <Filter>头文件\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\ClipCommand.h">
+      <Filter>头文件\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\DrawCommand.h">
+      <Filter>头文件\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\DrawEffectCommand.h">
+      <Filter>头文件\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\DrawImageCommand.h">
+      <Filter>头文件\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\DrawTextCommand.h">
+      <Filter>头文件\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\ExecutableBase.h">
+      <Filter>头文件\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\FillCommand.h">
+      <Filter>头文件\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\RenderContext.h">
+      <Filter>头文件\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\RenderState.h">
+      <Filter>头文件\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\StrokeCommand.h">
+      <Filter>头文件\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Geometries.h">
+      <Filter>头文件\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Effects\Effects.h">
+      <Filter>头文件\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Rectangle.h">
+      <Filter>头文件\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\GeometryGroup.h">
+      <Filter>头文件\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Device.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\StreamGeometry.h">
+      <Filter>头文件\Geometry</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Media\Bitmap.cpp">
+      <Filter>源文件\Media</Filter>
+    </ClCompile>
+    <ClCompile Include="Brush\BitmapBrush.cpp">
+      <Filter>源文件\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Brush\Brush.cpp">
+      <Filter>源文件\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Brush\GradientStopCollection.cpp">
+      <Filter>源文件\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Brush\LinearGradientBrush.cpp">
+      <Filter>源文件\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Brush\Pen.cpp">
+      <Filter>源文件\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Brush\RadialGradientBrush.cpp">
+      <Filter>源文件\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Brush\SolidColorBrush.cpp">
+      <Filter>源文件\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Brush\StrokeStyle.cpp">
+      <Filter>源文件\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\ArcSegment.cpp">
+      <Filter>源文件\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\BezierSegment.cpp">
+      <Filter>源文件\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\CombinedGeometry.cpp">
+      <Filter>源文件\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Ellipse.cpp">
+      <Filter>源文件\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Figure.cpp">
+      <Filter>源文件\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Geometry.cpp">
+      <Filter>源文件\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\LineSegment.cpp">
+      <Filter>源文件\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\PathGeometry.cpp">
+      <Filter>源文件\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\QuadraticBezierSegment.cpp">
+      <Filter>源文件\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\RoundedRectangle.cpp">
+      <Filter>源文件\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\TransformedGeometry.cpp">
+      <Filter>源文件\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Text\TextFormat.cpp">
+      <Filter>源文件\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Text\TextLayout.cpp">
+      <Filter>源文件\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Effects\BlurEffect.cpp">
+      <Filter>源文件\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Effects\DropShadowEffect.cpp">
+      <Filter>源文件\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Effects\EffectResource.cpp">
+      <Filter>源文件\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Effects\ElementEffect.cpp">
+      <Filter>源文件\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Effects\SaturationEffect.cpp">
+      <Filter>源文件\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\DrawEffectCommand.cpp">
+      <Filter>源文件\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\DrawImageCommand.cpp">
+      <Filter>源文件\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\DrawTextCommand.cpp">
+      <Filter>源文件\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\FillCommand.cpp">
+      <Filter>源文件\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\RenderContext.cpp">
+      <Filter>源文件\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\StrokeCommand.cpp">
+      <Filter>源文件\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Feature8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Rectangle.cpp">
+      <Filter>源文件\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\GeometryGroup.cpp">
+      <Filter>源文件\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\StreamGeometry.cpp">
+      <Filter>源文件\Geometry</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graphic8.def">
+      <Filter>源文件</Filter>
+    </None>
+  </ItemGroup>
+</Project>

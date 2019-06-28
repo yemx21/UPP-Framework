@@ -1,0 +1,910 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E4F8CEC5-B670-4456-8F53-A61F32609655}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Runtime</RootNamespace>
+    <ProjectName>ucorlib</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141_clang_c2</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\Debug\</OutDir>
+    <TargetName>ucorlibd</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>ucorlibd</TargetName>
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\Debug_x64\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\Release\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\Release_x64\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;RUNTIME_EXPORTS;REFLECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+        XCOPY $(ProjectDir)Any.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Anys.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ConditionalAnyVisitor.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)DefaultVariadicAny.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OptionalVariadicAny.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)RealVariadicAny.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)VariadicAny.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)VariadicAnyVisitor.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Variant.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Cloner.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ComparisonHelper.h $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Converter.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Event.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Action.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FloatingHelper.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Formatter.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)GuidHelper.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)IApplication.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)IFormattable.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Optional.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OSHelper.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Parser.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)StringHelper.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)IEnumerator.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Calendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Calendars.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ChineseLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)CultureInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ITranslatable.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)EastAsianLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)GregorianCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)HebrewCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)HijriCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)JapaneseCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)JapaneseLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)KoreanCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)KoreanLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PersianCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TaiwanCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TaiwanLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ThaiBuddhistCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)UmAlQuraCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Encodings.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FileReader.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FileStream.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FileStreamReader.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Memory.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)ConstructorTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FieldTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FunctionTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MethodTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OperatorTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PropertyTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)IApplication.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)AppDomain.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ArrayType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Assembly.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Attribute.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ClassInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ConstructorInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ConstructorType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Enumerators.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)EnumInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FieldInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FieldType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MemberInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MemoryPtrType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MethodInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MethodType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)NameSpace.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OperatorInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Operators.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OperatorType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OptionalType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Predicates.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PropertyInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PropertyType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PtrType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Reflection.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)RefType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ResultType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Type.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TypeCaches.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TypeConverter.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Color.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)CornerRadius.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)CriticalSection.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)DateTime.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)DynamicArray.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)InertiaString.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Matrix.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Object.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ObservableCollection.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Point.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Rect.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Result.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)RuntimeTypes.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Size.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Thickness.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TimeSpan.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TimeZoneInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Version.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Uri.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Common.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Config.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)KeyWords.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Shared.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)System.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Runtimes.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)INotifyCompletion.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(TargetDir)$(TargetName).dll $(UPPSDK_DIR)\1000\Lib\x86\   /Y
+        XCOPY $(TargetDir)$(TargetName).lib $(UPPSDK_DIR)\1000\Lib\x86\   /Y
+        XCOPY $(TargetDir)$(TargetName).pdb $(UPPSDK_DIR)\1000\Lib\x86\   /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;_USRDLL;RUNTIME_EXPORTS;REFLECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
+      <MinimalRebuild>false</MinimalRebuild>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>..\WinEnv\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+        XCOPY $(ProjectDir)Any.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Anys.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ConditionalAnyVisitor.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)DefaultVariadicAny.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OptionalVariadicAny.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)RealVariadicAny.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)VariadicAny.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)VariadicAnyVisitor.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Variant.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Cloner.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Converter.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Event.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Delegate.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Action.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Func.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FloatingHelper.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Formatter.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)GuidHelper.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)IFormattable.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Optional.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OSHelper.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Parser.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)StringHelper.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Calendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Calendars.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ChineseLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)CultureInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)EastAsianLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)GregorianCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)HebrewCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)HijriCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)JapaneseCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)JapaneseLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)KoreanCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)KoreanLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PersianCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TaiwanCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TaiwanLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ThaiBuddhistCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)UmAlQuraCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Encodings.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FileReader.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FileStream.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FileStreamReader.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)ConstructorTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FieldTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FunctionTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MethodTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OperatorTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PropertyTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)AppDomain.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ArrayType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Assembly.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Attribute.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ClassInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ConstructorInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ConstructorType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Enumerators.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)EnumInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FieldInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FieldType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MemberInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MemoryPtrType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MethodInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MethodType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)NameSpace.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OperatorInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Operators.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OperatorType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OptionalType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Predicates.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PropertyInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PropertyType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PtrType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Reflection.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)RefType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ResultType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Type.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TypeCaches.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TypeConverter.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Color.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)CornerRadius.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)CriticalSection.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)DateTime.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)DynamicArray.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)InertiaString.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Matrix.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Object.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ObservableCollection.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Point.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Rect.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Result.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)RuntimeTypes.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Size.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Thickness.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TimeSpan.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TimeZoneInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Version.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Uri.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Common.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Config.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)KeyWords.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Shared.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)System.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Async.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Thread.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Runtimes.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)CompileTimeMap.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(TargetDir)$(TargetName).dll $(UPPSDK_DIR)\1000\Lib\x64\   /Y
+        XCOPY $(TargetDir)$(TargetName).lib $(UPPSDK_DIR)\1000\Lib\x64\   /Y
+        XCOPY $(TargetDir)$(TargetName).pdb $(UPPSDK_DIR)\1000\Lib\x64\   /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;RUNTIME_EXPORTS;REFLECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <MinimalRebuild>true</MinimalRebuild>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+        XCOPY $(ProjectDir)Any.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Anys.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ConditionalAnyVisitor.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)DefaultVariadicAny.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OptionalVariadicAny.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)RealVariadicAny.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)VariadicAny.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)VariadicAnyVisitor.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Variant.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Cloner.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Converter.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Event.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FloatingHelper.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Formatter.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)GuidHelper.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)IFormattable.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Optional.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OSHelper.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Parser.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)StringHelper.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)IEnumerator.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+
+        XCOPY $(ProjectDir)Calendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Calendars.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ChineseLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)CultureInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)EastAsianLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)GregorianCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)HebrewCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)HijriCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)JapaneseCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)JapaneseLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)KoreanCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)KoreanLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PersianCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TaiwanCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TaiwanLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ThaiBuddhistCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)UmAlQuraCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Encodings.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FileReader.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FileStream.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FileStreamReader.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Memory.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)ConstructorTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FieldTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FunctionTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MethodTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OperatorTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PropertyTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)IApplication.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)AppDomain.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ArrayType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Assembly.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Attribute.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ClassInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ConstructorInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ConstructorType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Enumerators.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)EnumInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FieldInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FieldType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MemberInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MemoryPtrType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MethodInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MethodType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)NameSpace.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OperatorInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Operators.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OperatorType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OptionalType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Predicates.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PropertyInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PropertyType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PtrType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Reflection.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)RefType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ResultType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Type.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TypeCaches.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TypeConverter.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Color.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)CornerRadius.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)CriticalSection.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)DateTime.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)DynamicArray.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)InertiaString.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Matrix.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Object.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ObservableCollection.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Point.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Rect.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Result.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)RuntimeTypes.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Size.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Thickness.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TimeSpan.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TimeZoneInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Version.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Uri.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Common.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Config.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)KeyWords.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Shared.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)System.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(TargetDir)$(TargetName).dll $(UPPSDK_DIR)\1000\Lib\x86\   /Y
+        XCOPY $(TargetDir)$(TargetName).lib $(UPPSDK_DIR)\1000\Lib\x86\   /Y
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN64;NDEBUG;_WINDOWS;_USRDLL;RUNTIME_EXPORTS;REFLECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <AdditionalIncludeDirectories>..\WinEnv\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+        XCOPY $(ProjectDir)Any.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Anys.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ConditionalAnyVisitor.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)DefaultVariadicAny.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OptionalVariadicAny.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)RealVariadicAny.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)VariadicAny.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)VariadicAnyVisitor.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Variant.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Cloner.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Converter.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Event.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Delegate.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Action.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Func.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FloatingHelper.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Formatter.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)GuidHelper.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)IFormattable.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Optional.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OSHelper.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Parser.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)StringHelper.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Calendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Calendars.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ChineseLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)CultureInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)EastAsianLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)GregorianCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)HebrewCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)HijriCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)JapaneseCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)JapaneseLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)KoreanCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)KoreanLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PersianCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TaiwanCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TaiwanLunisolarCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ThaiBuddhistCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)UmAlQuraCalendar.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Encodings.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FileReader.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FileStream.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FileStreamReader.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)ConstructorTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FieldTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FunctionTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MethodTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OperatorTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PropertyTypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)AppDomain.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ArrayType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Assembly.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Attribute.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ClassInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ConstructorInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ConstructorType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Enumerators.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)EnumInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FieldInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)FieldType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MemberInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MemoryPtrType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MethodInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)MethodType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)NameSpace.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OperatorInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Operators.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OperatorType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)OptionalType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Predicates.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PropertyInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PropertyType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)PtrType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Reflection.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)RefType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ResultType.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Type.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TypeCaches.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TypeConverter.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TypeList.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Color.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)CornerRadius.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)CriticalSection.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)DateTime.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)DynamicArray.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)InertiaString.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Matrix.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Object.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)ObservableCollection.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Point.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Rect.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Result.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)RuntimeTypes.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Size.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Thickness.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TimeSpan.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)TimeZoneInfo.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Version.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Uri.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Common.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Config.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)KeyWords.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Shared.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)System.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(ProjectDir)Async.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Thread.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)Runtimes.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+        XCOPY $(ProjectDir)CompileTimeMap.h  $(UPPSDK_DIR)\1000\Include\System\   /Y
+
+        XCOPY $(TargetDir)$(TargetName).dll  $(UPPSDK_DIR)\1000\Lib\x64\   /Y
+        XCOPY $(TargetDir)$(TargetName).lib  $(UPPSDK_DIR)\1000\Lib\x64\   /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AES.cpp" />
+    <ClCompile Include="Any.cpp" />
+    <ClCompile Include="AppDomain.cpp" />
+    <ClCompile Include="AppDomain_impl.cpp" />
+    <ClCompile Include="ArrayType.cpp" />
+    <ClCompile Include="Assembly.cpp" />
+    <ClCompile Include="Assembly_impl.cpp" />
+    <ClCompile Include="Async.cpp" />
+    <ClCompile Include="Attribute.cpp" />
+    <ClCompile Include="BuiltInAssembly.cpp" />
+    <ClCompile Include="Calendar.cpp" />
+    <ClCompile Include="CalendarData.cpp" />
+    <ClCompile Include="CalendarHelper.cpp" />
+    <ClCompile Include="ChineseLunisolarCalendar.cpp" />
+    <ClCompile Include="ClassInfo.cpp" />
+    <ClCompile Include="Cloner.cpp" />
+    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="ConstructorInfo.cpp" />
+    <ClCompile Include="ConstructorType.cpp" />
+    <ClCompile Include="Converter.cpp" />
+    <ClCompile Include="CornerRadius.cpp" />
+    <ClCompile Include="CriticalSection.cpp" />
+    <ClCompile Include="CultureData.cpp" />
+    <ClCompile Include="CultureInfo.cpp" />
+    <ClCompile Include="CultureInfo_impl.cpp" />
+    <ClCompile Include="DateTime.cpp" />
+    <ClCompile Include="DateTimeFormat.cpp" />
+    <ClCompile Include="Delegate.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="EastAsianLunisolarCalendar.cpp" />
+    <ClCompile Include="Encodings.cpp" />
+    <ClCompile Include="Enumerators.cpp" />
+    <ClCompile Include="EnumInfo.cpp" />
+    <ClCompile Include="Event.cpp" />
+    <ClCompile Include="Factory.cpp" />
+    <ClCompile Include="FieldInfo.cpp" />
+    <ClCompile Include="FieldType.cpp" />
+    <ClCompile Include="FileReader.cpp" />
+    <ClCompile Include="FileStream.cpp" />
+    <ClCompile Include="FileStreamReader.cpp" />
+    <ClCompile Include="FloatingHelper.cpp" />
+    <ClCompile Include="Formatter.cpp" />
+    <ClCompile Include="GregorianCalendar.cpp" />
+    <ClCompile Include="GregorianCalendarHelper.cpp" />
+    <ClCompile Include="HebrewCalendar.cpp" />
+    <ClCompile Include="HijriCalendar.cpp" />
+    <ClCompile Include="IApplication.cpp" />
+    <ClCompile Include="InertiaString.cpp" />
+    <ClCompile Include="ITranslatable.cpp" />
+    <ClCompile Include="JapaneseCalendar.cpp" />
+    <ClCompile Include="JapaneseLunisolarCalendar.cpp" />
+    <ClCompile Include="KoreanCalendar.cpp" />
+    <ClCompile Include="KoreanLunisolarCalendar.cpp" />
+    <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="MD5.cpp" />
+    <ClCompile Include="MemoryPtrType.cpp" />
+    <ClCompile Include="MethodInfo.cpp" />
+    <ClCompile Include="MethodType.cpp" />
+    <ClCompile Include="ModifiedType.cpp" />
+    <ClCompile Include="NameSpace.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="OperatorInfo.cpp" />
+    <ClCompile Include="OperatorType.cpp" />
+    <ClCompile Include="OptionalType.cpp" />
+    <ClCompile Include="OSHelper.cpp" />
+    <ClCompile Include="Parser.cpp" />
+    <ClCompile Include="PersianCalendar.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="PropertyInfo.cpp" />
+    <ClCompile Include="PtrType.cpp" />
+    <ClCompile Include="PtrType_impl.cpp" />
+    <ClCompile Include="Rect.cpp" />
+    <ClCompile Include="Reflection.cpp" />
+    <ClCompile Include="RefType.cpp" />
+    <ClCompile Include="RefType_impl.cpp" />
+    <ClCompile Include="ResultType.cpp" />
+    <ClCompile Include="Runtime.cpp" />
+    <ClCompile Include="RuntimeTypes.cpp" />
+    <ClCompile Include="Size.cpp" />
+    <ClCompile Include="TaiwanCalendar.cpp" />
+    <ClCompile Include="TaiwanLunisolarCalendar.cpp" />
+    <ClCompile Include="ThaiBuddhistCalendar.cpp" />
+    <ClCompile Include="Thickness.cpp" />
+    <ClCompile Include="Thread.cpp" />
+    <ClCompile Include="TimeSpan.cpp" />
+    <ClCompile Include="TimeZoneInfo.cpp" />
+    <ClCompile Include="TimeZoneInfo_impl.cpp" />
+    <ClCompile Include="Type.cpp" />
+    <ClCompile Include="TypeCaches.cpp" />
+    <ClCompile Include="UmAlQuraCalendar.cpp" />
+    <ClCompile Include="Uri.cpp" />
+    <ClCompile Include="Version.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Action.h" />
+    <ClInclude Include="AES.h" />
+    <ClInclude Include="Any.h" />
+    <ClInclude Include="Anys.h" />
+    <ClInclude Include="AppDomain.h" />
+    <ClInclude Include="AppDomain_impl.h" />
+    <ClInclude Include="ArrayType.h" />
+    <ClInclude Include="Assembly.h" />
+    <ClInclude Include="Assembly_impl.h" />
+    <ClInclude Include="Attribute.h" />
+    <ClInclude Include="BuiltInAssembly.h" />
+    <ClInclude Include="Calendar.h" />
+    <ClInclude Include="CalendarData.h" />
+    <ClInclude Include="CalendarHelper.h" />
+    <ClInclude Include="Calendars.h" />
+    <ClInclude Include="ChineseLunisolarCalendar.h" />
+    <ClInclude Include="ClassInfo.h" />
+    <ClInclude Include="Cloner.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="ComparisonHelper.h" />
+    <ClInclude Include="CompileTimeMap.h" />
+    <ClInclude Include="ConditionalAnyVisitor.h" />
+    <ClInclude Include="ConstructorInfo.h" />
+    <ClInclude Include="ConstructorType.h" />
+    <ClInclude Include="ConstructorTypeList.h" />
+    <ClInclude Include="Converter.h" />
+    <ClInclude Include="CornerRadius.h" />
+    <ClInclude Include="CriticalSection.h" />
+    <ClInclude Include="CultureData.h" />
+    <ClInclude Include="CultureInfo.h" />
+    <ClInclude Include="CultureInfo_impl.h" />
+    <ClInclude Include="DateTime.h" />
+    <ClInclude Include="DateTimeFormat.h" />
+    <ClInclude Include="DefaultVariadicAny.h" />
+    <ClInclude Include="Delegate.h" />
+    <ClInclude Include="DynamicArray.h" />
+    <ClInclude Include="EastAsianLunisolarCalendar.h" />
+    <ClInclude Include="Encodings.h" />
+    <ClInclude Include="Enumerators.h" />
+    <ClInclude Include="Enumerators_impl.h" />
+    <ClInclude Include="EnumInfo.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="Factory.h" />
+    <ClInclude Include="FieldInfo.h" />
+    <ClInclude Include="FieldType.h" />
+    <ClInclude Include="FieldTypeList.h" />
+    <ClInclude Include="FileReader.h" />
+    <ClInclude Include="FileStream.h" />
+    <ClInclude Include="FileStreamReader.h" />
+    <ClInclude Include="FloatingHelper.h" />
+    <ClInclude Include="Formatter.h" />
+    <ClInclude Include="Func.h" />
+    <ClInclude Include="FunctionTypeList.h" />
+    <ClInclude Include="GregorianCalendar.h" />
+    <ClInclude Include="GregorianCalendarHelper.h" />
+    <ClInclude Include="GuidHelper.h" />
+    <ClInclude Include="HebrewCalendar.h" />
+    <ClInclude Include="HijriCalendar.h" />
+    <ClInclude Include="IApplication.h" />
+    <ClInclude Include="IEnumerator.h" />
+    <ClInclude Include="IFormattable.h" />
+    <ClInclude Include="Async.h" />
+    <ClInclude Include="InertiaString.h" />
+    <ClInclude Include="ITranslatable.h" />
+    <ClInclude Include="JapaneseCalendar.h" />
+    <ClInclude Include="JapaneseLunisolarCalendar.h" />
+    <ClInclude Include="KeyWords.h" />
+    <ClInclude Include="KoreanCalendar.h" />
+    <ClInclude Include="KoreanLunisolarCalendar.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MD5.h" />
+    <ClInclude Include="MemberInfo.h" />
+    <ClInclude Include="Memory.h" />
+    <ClInclude Include="MemoryPtrType.h" />
+    <ClInclude Include="MethodInfo.h" />
+    <ClInclude Include="MethodType.h" />
+    <ClInclude Include="MethodTypeList.h" />
+    <ClInclude Include="ModifiedType_impl.h" />
+    <ClInclude Include="NameSpace.h" />
+    <ClInclude Include="NameSpace_impl.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="ObservableCollection.h" />
+    <ClInclude Include="OperatorInfo.h" />
+    <ClInclude Include="Operators.h" />
+    <ClInclude Include="OperatorType.h" />
+    <ClInclude Include="OperatorTypeList.h" />
+    <ClInclude Include="Optional.h" />
+    <ClInclude Include="OptionalType.h" />
+    <ClInclude Include="OptionalVariadicAny.h" />
+    <ClInclude Include="OSHelper.h" />
+    <ClInclude Include="Parser.h" />
+    <ClInclude Include="PersianCalendar.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="Predicates.h" />
+    <ClInclude Include="PropertyInfo.h" />
+    <ClInclude Include="PropertyType.h" />
+    <ClInclude Include="PropertyTypeList.h" />
+    <ClInclude Include="PtrType.h" />
+    <ClInclude Include="PtrType_impl.h" />
+    <ClInclude Include="RealVariadicAny.h" />
+    <ClInclude Include="Rect.h" />
+    <ClInclude Include="Reflection.h" />
+    <ClInclude Include="RefType.h" />
+    <ClInclude Include="RefType_impl.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Result.h" />
+    <ClInclude Include="ResultType.h" />
+    <ClInclude Include="Runtimes.h" />
+    <ClInclude Include="RuntimeTypes.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="Shared.h" />
+    <ClInclude Include="Size.h" />
+    <ClInclude Include="StringHelper.h" />
+    <ClInclude Include="System.h" />
+    <ClInclude Include="TaiwanCalendar.h" />
+    <ClInclude Include="TaiwanLunisolarCalendar.h" />
+    <ClInclude Include="ThaiBuddhistCalendar.h" />
+    <ClInclude Include="Thickness.h" />
+    <ClInclude Include="Thread.h" />
+    <ClInclude Include="TimeSpan.h" />
+    <ClInclude Include="TimeZoneInfo.h" />
+    <ClInclude Include="TimeZoneInfo_impl.h" />
+    <ClInclude Include="Type.h" />
+    <ClInclude Include="TypeCaches.h" />
+    <ClInclude Include="TypeCaches_impl.h" />
+    <ClInclude Include="TypeConverter.h" />
+    <ClInclude Include="TypeList.h" />
+    <ClInclude Include="TypeRecycle.h" />
+    <ClInclude Include="UmAlQuraCalendar.h" />
+    <ClInclude Include="Uri.h" />
+    <ClInclude Include="UriUtils.h" />
+    <ClInclude Include="VariadicAny.h" />
+    <ClInclude Include="VariadicAnyVisitor.h" />
+    <ClInclude Include="Variant.h" />
+    <ClInclude Include="Version.h" />
+    <ClInclude Include="WindowsVersionHelper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ucorlib.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WinEnv\WinEnv.vcxproj">
+      <Project>{8114ff44-de25-438e-9960-07fa41216810}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\Internal">
+      <UniqueIdentifier>{a0442286-5038-4d66-b87f-446acf26ab7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Addin">
+      <UniqueIdentifier>{e79185f7-21e9-492f-af66-5fcabe755000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Core">
+      <UniqueIdentifier>{c8060d5a-c6e9-4780-ab68-9af31c452f8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Core">
+      <UniqueIdentifier>{fdc265ab-a21b-47c2-8453-51db651083cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Buffer">
+      <UniqueIdentifier>{3340b17b-07be-4c75-897d-62325090185f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Buffer">
+      <UniqueIdentifier>{9b0eee72-1b54-433c-a1f2-dbedf258edd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="U++">
+      <UniqueIdentifier>{b5ad8293-3e50-4804-84f2-67339422eef5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="U++\UPP_Debug_x64">
+      <UniqueIdentifier>{6c7314e1-2888-4c40-84ff-9842ad582ecb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="U++\UPP_Release_x64">
+      <UniqueIdentifier>{c218d1c7-3359-4bb9-9263-1962302aa006}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AudioShared.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioTypes.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Core.cpp">
+      <Filter>源文件\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Dither.cpp">
+      <Filter>源文件\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioBuffer.cpp">
+      <Filter>源文件\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioAddin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Config.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Debug_x64\uentry.upp">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Debug_x64\uassembly.upp">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Debug_x64\AudioTypes.upp">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Debug_x64\Addin.upp">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Debug_x64\AudioAddin.upp">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Debug_x64\Core.upp">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Debug_x64\AudioBuffer.upp">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Release_x64\uentry.upp">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Release_x64\uassembly.upp">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Release_x64\AudioTypes.upp">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Release_x64\Addin.upp">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Release_x64\AudioAddin.upp">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Release_x64\Core.upp">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="U++\Release_x64\AudioBuffer.upp">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioTypes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioAddin.h">
+      <Filter>头文件\Addin</Filter>
+    </ClInclude>
+    <ClInclude Include="Addin.h">
+      <Filter>头文件\Addin</Filter>
+    </ClInclude>
+    <ClInclude Include="Core.h">
+      <Filter>头文件\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioBuffer.h">
+      <Filter>头文件\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Internal\Core_base_impl.h">
+      <Filter>头文件\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Dither.h">
+      <Filter>头文件\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="U++\Debug_x64\uentry.uh">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClInclude>
+    <ClInclude Include="U++\Debug_x64\uassembly.uh">
+      <Filter>U++\UPP_Debug_x64</Filter>
+    </ClInclude>
+    <ClInclude Include="U++\Release_x64\uentry.uh">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClInclude>
+    <ClInclude Include="U++\Release_x64\uassembly.uh">
+      <Filter>U++\UPP_Release_x64</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7AA33B5D-A98E-4787-A44A-1D1A291F56E7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>AudioShared</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\..\Debug\</OutDir>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(UPPSDK_DIR)1000\Lib\x86;</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(UPPSDK_DIR)1000\Include;</IncludePath>
+    <UPPReflection>true</UPPReflection>
+    <UPPGenerateDoc>false</UPPGenerateDoc>
+    <UPPPreCompileHeader>Config.h</UPPPreCompileHeader>
+    <UPPAssemblyDefination>asm=AudioShared,ver=1.0,pbk=25FD92AF-6FA8-4429-99AF-C0912A722486</UPPAssemblyDefination>
+    <TargetName>AudioSharedd</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(UPPSDK_DIR)\1000\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(UPPSDK_DIR)\1000\Lib\x64;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\..\Debug_x64\</OutDir>
+    <UPPReflection>true</UPPReflection>
+    <UPPGenerateDoc>false</UPPGenerateDoc>
+    <UPPPreCompileHeader>$(ProjectDir)Config.h</UPPPreCompileHeader>
+    <UPPAssemblyDefination>asm=AudioShared,ver=1.0,pbk=25FD92AF-6FA8-4429-99AF-C0912A722486</UPPAssemblyDefination>
+    <TargetName>AudioSharedd</TargetName>
+    <UPPGenDir>$(ProjectDir)U++\$(Configuration)_$(Platform)\</UPPGenDir>
+    <UPPSwitchFlag>UPP_$(Configuration)_$(Platform)</UPPSwitchFlag>
+    <UPPEntry>uentry</UPPEntry>
+    <UPPAssembly>uassembly</UPPAssembly>
+    <UPPCustomEntryFunction>false</UPPCustomEntryFunction>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\Release\</OutDir>
+    <IncludePath>$(UPPSDK_DIR)1000\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(UPPSDK_DIR)1000\Lib\x86;$(LibraryPath)</LibraryPath>
+    <UPPReflection>true</UPPReflection>
+    <UPPPreCompileHeader>Config.h</UPPPreCompileHeader>
+    <UPPAssemblyDefination>asm=AudioShared,ver=1.0,pbk=25FD92AF-6FA8-4429-99AF-C0912A722486</UPPAssemblyDefination>
+    <UPPGenerateDoc>false</UPPGenerateDoc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(UPPSDK_DIR)\1000\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(UPPSDK_DIR)\1000\Lib\x64;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
+    <UPPGenDir>$(ProjectDir)U++\$(Configuration)_$(Platform)\</UPPGenDir>
+    <UPPSwitchFlag>UPP_$(Configuration)_$(Platform)</UPPSwitchFlag>
+    <UPPEntry>uentry</UPPEntry>
+    <UPPAssembly>uassembly</UPPAssembly>
+    <UPPCustomEntryFunction>false</UPPCustomEntryFunction>
+    <UPPReflection>true</UPPReflection>
+    <UPPAssemblyDefination>asm=AudioShared,ver=1.0,pbk=25FD92AF-6FA8-4429-99AF-C0912A722486</UPPAssemblyDefination>
+    <UPPPreCompileHeader>$(ProjectDir)Config.h</UPPPreCompileHeader>
+    <UPPGenerateDoc>false</UPPGenerateDoc>
+    <OutDir>..\..\..\Release_x64\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;AUDIOSHARED_EXPORTS;REFLECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)U++\</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ucorlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+        XCOPY $(ProjectDir)Config.h $(UPPSDK_DIR)1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)Core.h $(UPPSDK_DIR)1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)AudioTypes.h $(UPPSDK_DIR)1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)AudioBuffer.h $(UPPSDK_DIR)1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)Addin.h $(UPPSDK_DIR)1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)AudioAddin.h $(UPPSDK_DIR)1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)Shared.h $(UPPSDK_DIR)1000\Include\System\Audio\   /Y</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>XCOPY $(TargetDir)$(TargetName).dll $(UPPSDK_DIR)1000\Lib\x86\   /Y
+XCOPY $(TargetDir)$(TargetName).lib $(UPPSDK_DIR)1000\Lib\x86\   /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;_USRDLL;AUDIOSHARED_EXPORTS;REFLECTION_SUPPORT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ucorlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+        XCOPY $(ProjectDir)Config.h $(UPPSDK_DIR)\1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)Core.h $(UPPSDK_DIR)\1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)AudioTypes.h $(UPPSDK_DIR)\1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)AudioBuffer.h $(UPPSDK_DIR)\1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)Addin.h $(UPPSDK_DIR)\1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)AudioAddin.h $(UPPSDK_DIR)\1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)Shared.h $(UPPSDK_DIR)\1000\Include\System\Audio\   /Y</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+        XCOPY $(TargetDir)$(TargetName).dll $(UPPSDK_DIR)\1000\Lib\x64\   /Y
+        XCOPY $(TargetDir)$(TargetName).lib $(UPPSDK_DIR)\1000\Lib\x64\   /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;AUDIOSHARED_EXPORTS;NOMINMAX;REFLECTION_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ucorlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+        XCOPY $(ProjectDir)Config.h $(UPPSDK_DIR)1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)Core.h $(UPPSDK_DIR)1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)AudioTypes.h $(UPPSDK_DIR)1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)AudioBuffer.h $(UPPSDK_DIR)1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)Addin.h $(UPPSDK_DIR)1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)AudioAddin.h $(UPPSDK_DIR)1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)Shared.h $(UPPSDK_DIR)1000\Include\System\Audio\   /Y</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>XCOPY $(TargetDir)$(TargetName).dll $(UPPSDK_DIR)1000\Lib\x86\   /Y
+XCOPY $(TargetDir)$(TargetName).lib $(UPPSDK_DIR)1000\Lib\x86\   /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN64;NDEBUG;_WINDOWS;_USRDLL;AUDIOSHARED_EXPORTS;NOMINMAX;REFLECTION_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ucorlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+        XCOPY $(ProjectDir)Config.h $(UPPSDK_DIR)\1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)Core.h $(UPPSDK_DIR)\1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)AudioTypes.h $(UPPSDK_DIR)\1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)AudioBuffer.h $(UPPSDK_DIR)\1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)Addin.h $(UPPSDK_DIR)\1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)AudioAddin.h $(UPPSDK_DIR)\1000\Include\System\Audio\   /Y
+        XCOPY $(ProjectDir)Shared.h $(UPPSDK_DIR)\1000\Include\System\Audio\   /Y</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>        XCOPY $(TargetDir)$(TargetName).dll $(UPPSDK_DIR)\1000\Lib\x64\   /Y
+        XCOPY $(TargetDir)$(TargetName).lib $(UPPSDK_DIR)\1000\Lib\x64\   /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Addin.h" />
+    <ClInclude Include="AudioBuffer.h" />
+    <ClInclude Include="AudioAddin.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="AudioTypes.h" />
+    <ClInclude Include="Core.h" />
+    <ClInclude Include="Dither.h" />
+    <ClInclude Include="Internal\Core_base_impl.h" />
+    <ClInclude Include="Shared.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AudioAddin.cpp" />
+    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="Dither.cpp" />
+    <ClCompile Include="AudioShared.cpp" />
+    <ClCompile Include="AudioTypes.cpp" />
+    <ClCompile Include="Core.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="AudioBuffer.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ItemGroup>
+    <PropertyPageSchema Include="$(UPPSDK_DIR)\1000\VCBuild\Reflection.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="U++\Debug_x64\uentry.uh">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Debug_x64\uentry.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="U++\Debug_x64\uassembly.uh">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Debug_x64\uassembly.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Debug_x64\AudioTypes.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Debug_x64\Addin.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Debug_x64\AudioAddin.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Debug_x64\Core.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Debug_x64\AudioBuffer.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="U++\Release_x64\uentry.uh">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Release_x64\uentry.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="U++\Release_x64\uassembly.uh">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Release_x64\uassembly.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Release_x64\AudioTypes.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Release_x64\Addin.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Release_x64\AudioAddin.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Release_x64\Core.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="U++\Release_x64\AudioBuffer.upp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

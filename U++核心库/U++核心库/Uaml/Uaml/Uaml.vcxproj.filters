@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="U++文件">
+      <UniqueIdentifier>{f5f0ec5b-ac7d-46fa-8fa3-d631f7465d85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Internal">
+      <UniqueIdentifier>{4268eab6-daa0-4986-b590-ac37a0dad185}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Internal">
+      <UniqueIdentifier>{315ad62d-ae74-4e41-89c4-de6a894e1248}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="U++\UPlusPlus.h">
+      <Filter>U++文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UamlReader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UamlServiceManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Uaml_Config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UamlGlobalTable.h">
+      <Filter>头文件\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="UamlAssemblyManager.h">
+      <Filter>头文件\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="UamlAssembly.h">
+      <Filter>头文件\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="UamlNamespace.h">
+      <Filter>头文件\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="UamlError.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Uaml.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UamlReader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UamlAssembly.cpp">
+      <Filter>源文件\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="UamlAssemblyManager.cpp">
+      <Filter>源文件\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="UamlNamespace.cpp">
+      <Filter>源文件\Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="UamlServiceManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
